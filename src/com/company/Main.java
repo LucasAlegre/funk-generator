@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.FileNotFoundException;
 import java.lang.annotation.ElementType;
 import java.util.*;
 import java.io.BufferedInputStream;
@@ -11,10 +12,12 @@ import java.net.URLConnection;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         Grammar funk = new Grammar();
-        funk.setInitialVariable("N");
+        funk.readFile("txtTest.txt");
+        funk.printGrammar();
+      /*  funk.setInitialVariable("N");
         funk.addRule("N", new ArrayList<String>(Arrays.asList("V", "VP")));
         funk.addRule("N", new ArrayList<String>(Arrays.asList("tchu tcha")));
         funk.addRule("V", new ArrayList<String>(Arrays.asList("VP")));
@@ -25,7 +28,7 @@ public class Main {
         e.setGrammar(funk);
         e.buildStateZero();
         e.printStates();
-
+*/
     }
 
 }

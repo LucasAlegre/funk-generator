@@ -1,0 +1,32 @@
+Terminais
+[ runs ]
+[ barks ]				
+[ eats ]				
+[ dog ]					
+[ cat ]					
+[ meat ]				
+[ the ]					
+[ a ]					
+Variaveis
+[ N ]					
+[ V ]					
+[ NP ]					
+[ DT ]					
+[ VP ]
+[ S ]
+Inicial
+[ S ]					
+Regras
+[ S ] > [ NP ] [ VP ] ;1
+[ NP ] > [ N ] ;0.7
+[ N ] > [ dog ] ;0.3
+[ N ] > [ cat ] ;0.3
+[ N ] > [ meat ] ;0.4
+[ VP ] > [ V ] [ NP ] ;0.8
+[ NP ] > [ DT ] [ N ] ;0.3
+[ VP ] > [ V ] ;0.2
+[ V ] > [ runs ] ;0.25
+[ V ] > [ barks ] ;0.5
+[ V ] > [ eats ] ;0.25
+[ DT ] > [ a ] ;0.45
+[ DT ] > [ the ] ;0.55

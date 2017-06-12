@@ -10,6 +10,7 @@ public class Production {
     private ArrayList<String> varOrTerminals;
     private int dotPos;
     private int productionSet;
+    public float probability;
 
     public int getDotPos() {
         return dotPos;

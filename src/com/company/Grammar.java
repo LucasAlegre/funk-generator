@@ -8,14 +8,27 @@ import java.util.*;
  * Created by lucas on 01/06/17.
  */
 public class Grammar {
-    public HashMap<String, ArrayList<Production>> rules;
+    public HashMap<String, HashSet<Production>> rules;
     private String initialVariable;
-    private ArrayList<String> variables = new ArrayList<>();
-    private ArrayList<String> terminals = new ArrayList<>();
+    private HashSet<String> variables;
+    private HashSet<String> terminals;
 
     public Grammar(){
 
-        this.rules = new HashMap<String, ArrayList<Production>>();
+        this.rules = new HashMap<String, HashSet<Production>>();
+        this.variables = new HashSet<String>();
+        this.terminals = new HashSet<String>();
+    }
+
+    public Grammar(String file){
+        this();
+
+        try{
+            readFile(file);
+        }
+        catch (Exception e){
+            System.out.println( e.getMessage() );
+        }
     }
 
     public Set<String> getVariables(){
@@ -30,7 +43,7 @@ public class Grammar {
         this.initialVariable = initialVariable;
     }
 
-    public ArrayList<Production> getProductions(String var){
+    public HashSet<Production> getProductions(String var){
         return rules.get(var);
     }
 
@@ -39,20 +52,20 @@ public class Grammar {
             rules.get(var).add(new Production(production));
 
         else{
-            ArrayList<Production> newProduction = new ArrayList<Production>();
+            HashSet<Production> newProduction = new HashSet<Production>();
             newProduction.add(new Production(production));
             rules.put(var, newProduction);
         }
     }
 
     public void addRule(String var, Production production, float prob){
-        production.probability = prob;
+        production.setProbability(prob);
         if(rules.containsKey(var))
 
             rules.get(var).add(production);
 
         else{
-            ArrayList<Production> newProduction = new ArrayList<Production>();
+            HashSet<Production> newProduction = new HashSet<Production>();
             newProduction.add(production);
             rules.put(var, newProduction);
         }
@@ -65,7 +78,7 @@ public class Grammar {
             rules.get(var).add(production);
 
         else{
-            ArrayList<Production> newProduction = new ArrayList<Production>();
+            HashSet<Production> newProduction = new HashSet<Production>();
             newProduction.add(production);
             rules.put(var, newProduction);
         }
@@ -77,8 +90,9 @@ public class Grammar {
         String opFlag = "Terminais";
         String buff;
         buff = sc.nextLine();
-        buff = sc.nextLine();
+
         while(sc.hasNext()){
+            buff = sc.nextLine();
             if(buff.compareTo("Variaveis") == 0 || buff.compareTo("Inicial") == 0|| buff.compareTo("Regras") == 0){
                 opFlag = buff;
                 buff = sc.nextLine();
@@ -120,11 +134,11 @@ public class Grammar {
                     }
                     this.addRule(variavel, new Production(bufferOfRules), probability);
                     break;
-                    }
-                buff = sc.nextLine();
             }
-
         }
+        sc.close();
+
+    }
 
     public void printGrammar(){
         for(String var : rules.keySet()) {
@@ -136,7 +150,8 @@ public class Grammar {
                         System.out.print(" * ");
                     System.out.print("[ " + rightSide.get(i) + " ]");
                 }
-                System.out.println("  Probability = " + p.probability);
+                //System.out.println("  Probability = " + p.probability);
+                System.out.println();
             }
         }
     }

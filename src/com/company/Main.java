@@ -14,21 +14,14 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        Grammar funk = new Grammar();
-        funk.readFile("txtTest.txt");
+        Grammar funk = new Grammar("txtTest.txt");
         funk.printGrammar();
-      /*  funk.setInitialVariable("N");
-        funk.addRule("N", new ArrayList<String>(Arrays.asList("V", "VP")));
-        funk.addRule("N", new ArrayList<String>(Arrays.asList("tchu tcha")));
-        funk.addRule("V", new ArrayList<String>(Arrays.asList("VP")));
-        funk.addRule("V", new ArrayList<String>(Arrays.asList("vaiii")));
 
-        funk.printGrammar();
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
         e.buildStateZero();
         e.printStates();
-*/
+
     }
 
 }

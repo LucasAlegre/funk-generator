@@ -31,12 +31,16 @@ public class EarlyParser {
         Grammar stateZero = new Grammar();
 
         // For each rule of the inital variable, clones it to the state zero
-        for(Production p : grammar.getProductions( grammar.getInitialVariable() )){
+        String initialVariable = grammar.getInitialVariable();
+        for(Production p : grammar.getProductions( initialVariable )){
             Production prod = new Production(p);
             prod.setDotPos(0);
             prod.setProductionSet(0);
-            stateZero.addRule(grammar.getInitialVariable(), prod);
+            stateZero.addRule(initialVariable, prod);
         }
+
+
+        states.add(stateZero);
 
         
     }

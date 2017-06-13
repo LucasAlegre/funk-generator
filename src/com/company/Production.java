@@ -10,7 +10,15 @@ public class Production {
     private ArrayList<String> varOrTerminals;
     private int dotPos;
     private int productionSet;
-    public float probability;
+    private float probability;
+
+    public float getProbability() {
+        return probability;
+    }
+
+    public void setProbability(float probability) {
+        this.probability = probability;
+    }
 
     public int getDotPos() {
         return dotPos;
@@ -33,12 +41,14 @@ public class Production {
         this.varOrTerminals = varOrTerm;
         this.dotPos = -1; // -1 indicates no dot
         this.productionSet = -1; // -1 indicates original grammar production
+        this.probability = -1;
     }
 
     public Production(Production p){
         varOrTerminals = p.getVarOrTerminals();
         dotPos = p.getDotPos();
         productionSet = p.getProductionSet();
+        probability = p.getProbability();;
 
     }
 

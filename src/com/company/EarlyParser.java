@@ -66,9 +66,39 @@ public class EarlyParser {
         }while(increased); // While there is rules to add
 
         states.add(stateZero);
-
-        
     }
+
+    public void parse(String s){
+
+        String[] sentence = s.split(" ");
+
+        buildStateZero();
+
+        for(int i = 1; i <= sentence.length; i++){
+            Grammar state = new Grammar();
+
+            //TODO: etapa (2)
+
+            boolean increased;
+            do{
+                increased = false;
+
+                //TODO: etapa(3)
+
+
+                //TODO: etapa(4)
+
+
+
+            }while (increased);
+
+            states.add(state);
+        }
+
+        //TODO: check se parseou ou não
+
+    }
+
 
     public static boolean isVariable(String s){
         if(Character.isUpperCase(s.charAt(0)))

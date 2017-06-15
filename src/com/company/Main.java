@@ -21,6 +21,7 @@ public class Main {
         e.setGrammar(funk);
         e.buildStateZero();
         e.printStates();
+        e.parse("the dog is");
 
     }
 

@@ -150,6 +150,8 @@ public class Grammar {
                         System.out.print(" * ");
                     System.out.print("[ " + rightSide.get(i) + " ]");
                 }
+                if(p.getProductionSet() != -1)
+                    System.out.print("/" + p.getProductionSet());
                 //System.out.println("  Probability = " + p.probability);
                 System.out.println();
             }

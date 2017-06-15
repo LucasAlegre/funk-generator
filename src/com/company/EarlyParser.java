@@ -46,19 +46,20 @@ public class EarlyParser {
             for(int i = count; i < variables.size(); i++){
                 Grammar temp = new Grammar();
                 for(Production p : stateZero.getProductions(variables.get(i))){
-                        String b = p.getFirstElement();
-                        if(b != variables.get(i))
-                            if (EarlyParser.isVariable(b)) {
-                                if(!variables.contains(b))
-                                    variables.add(b);
-                                for (Production p2 : grammar.getProductions(b)) {
-                                    Production prod = new Production(p2);
-                                    prod.setDotPos(0);
-                                    prod.setProductionSet(0);
+                    String b = p.getFirstElement();
+                        if (EarlyParser.isVariable(b)) {
+                            if(!variables.contains(b))
+                                variables.add(b);
+                            for (Production p2 : grammar.getProductions(b)) {
+                                Production prod = new Production(p2);
+                                prod.setDotPos(0);
+                                prod.setProductionSet(0);
+                                if(!stateZero.getVariables().contains(b)) {
                                     temp.addRule(b, prod);
                                     increased = true;
                                 }
                             }
+                        }
                 }
                 count = i;
                 stateZero.adiciona(temp);

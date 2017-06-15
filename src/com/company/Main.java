@@ -20,7 +20,7 @@ public class Main {
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
 
-        //e.parse("number + ");
+        //e.parse("number + number * number");
         e.buildStateZero();
         e.printStates();
 

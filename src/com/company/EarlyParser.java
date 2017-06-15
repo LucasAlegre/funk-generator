@@ -39,12 +39,49 @@ public class EarlyParser {
             stateZero.addRule(initialVariable, prod);
         }
 
+        boolean increased;
+        ArrayList<String> variables = new ArrayList<String>(stateZero.getVariables());
+        int count = 0;
+        do{
+            increased = false;
 
+            for(int i = count; i < variables.size(); i++){
+                for(Production p : stateZero.getProductions(variables.get(i))){
+                    String b = p.getFirstElement();
 
+                    if(EarlyParser.isVariable(b)){
+                        variables.add(b);
+                        for(Production p2 : grammar.getProductions(b)){
+                            Production prod = new Production(p2);
+                            prod.setDotPos(0);
+                            prod.setProductionSet(0);
+                            stateZero.addRule(b, prod);
+                            increased = true;
+                        }
+                    }
+                }
+                count = i;
+            }
+
+        }while(increased); // While there is rules to add
 
         states.add(stateZero);
 
         
+    }
+
+    public static boolean isVariable(String s){
+        if(Character.isUpperCase(s.charAt(0)))
+            return true;
+        else
+            return false;
+    }
+
+    public static boolean isTerminal(String s){
+        if(Character.isLowerCase(s.charAt(0)))
+            return true;
+        else
+            return false;
     }
 
     public void printStates(){

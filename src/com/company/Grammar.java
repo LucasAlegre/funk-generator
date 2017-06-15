@@ -8,14 +8,14 @@ import java.util.*;
  * Created by lucas on 01/06/17.
  */
 public class Grammar {
-    public HashMap<String, HashSet<Production>> rules;
+    public HashMap<String, ArrayList<Production>> rules;
     private String initialVariable;
     private HashSet<String> variables;
     private HashSet<String> terminals;
 
     public Grammar(){
 
-        this.rules = new HashMap<String, HashSet<Production>>();
+        this.rules = new HashMap<String, ArrayList<Production>>();
         this.variables = new HashSet<String>();
         this.terminals = new HashSet<String>();
     }
@@ -43,7 +43,7 @@ public class Grammar {
         this.initialVariable = initialVariable;
     }
 
-    public HashSet<Production> getProductions(String var){
+    public ArrayList<Production> getProductions(String var){
         return rules.get(var);
     }
 
@@ -52,7 +52,7 @@ public class Grammar {
             rules.get(var).add(new Production(production));
 
         else{
-            HashSet<Production> newProduction = new HashSet<Production>();
+            ArrayList<Production> newProduction = new ArrayList<Production>();
             newProduction.add(new Production(production));
             rules.put(var, newProduction);
         }
@@ -65,7 +65,7 @@ public class Grammar {
             rules.get(var).add(production);
 
         else{
-            HashSet<Production> newProduction = new HashSet<Production>();
+            ArrayList<Production> newProduction = new ArrayList<Production>();
             newProduction.add(production);
             rules.put(var, newProduction);
         }
@@ -78,7 +78,7 @@ public class Grammar {
             rules.get(var).add(production);
 
         else{
-            HashSet<Production> newProduction = new HashSet<Production>();
+            ArrayList<Production> newProduction = new ArrayList<Production>();
             newProduction.add(production);
             rules.put(var, newProduction);
         }

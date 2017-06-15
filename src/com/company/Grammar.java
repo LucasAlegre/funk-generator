@@ -140,6 +140,14 @@ public class Grammar {
 
     }
 
+    public void adiciona(Grammar g){
+        for(String s : g.getVariables()){
+            for(Production p : g.getProductions(s)){
+                addRule(s, p);
+            }
+        }
+    }
+
     public void printGrammar(){
         for(String var : rules.keySet()) {
             for (Production p : rules.get(var)){

@@ -44,21 +44,24 @@ public class EarlyParser {
             increased = false;
 
             for(int i = count; i < variables.size(); i++){
+                Grammar temp = new Grammar();
                 for(Production p : stateZero.getProductions(variables.get(i))){
-                    String b = p.getFirstElement();
-
-                    if(EarlyParser.isVariable(b)){
-                        variables.add(b);
-                        for(Production p2 : grammar.getProductions(b)){
-                            Production prod = new Production(p2);
-                            prod.setDotPos(0);
-                            prod.setProductionSet(0);
-                            stateZero.addRule(b, prod);
-                            increased = true;
-                        }
-                    }
+                        String b = p.getFirstElement();
+                        if(b != variables.get(i))
+                            if (EarlyParser.isVariable(b)) {
+                                if(!variables.contains(b))
+                                    variables.add(b);
+                                for (Production p2 : grammar.getProductions(b)) {
+                                    Production prod = new Production(p2);
+                                    prod.setDotPos(0);
+                                    prod.setProductionSet(0);
+                                    temp.addRule(b, prod);
+                                    increased = true;
+                                }
+                            }
                 }
                 count = i;
+                stateZero.adiciona(temp);
             }
 
         }while(increased); // While there is rules to add
@@ -68,27 +71,31 @@ public class EarlyParser {
 
     public void parse(String s){
 
+        // Sentence to be parsed
         String[] sentence = s.split(" ");
 
+        // Build state 0
         buildStateZero();
 
+        // Step (1)
         for(int i = 1; i <= sentence.length; i++){
-            Grammar state = new Grammar();  
+            Grammar state = new Grammar();
+            // Step (2)
             Grammar previousState = states.get(i-1);
-            	for( String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
-            		for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
-            			if(p.isDotEnd() == false){
-	            			if(p.getElementAtDot().equals(sentence[i-1])){//se o elemento pos ponto for igual a palavra da pessoa
-	            				//significa que eu tenho de adicionar a regra no conjunto de produções atual
-	            				Production newP = new Production(p); 
-	            				newP.incDot();
-	            				state.addRule(a, newP);
-	            			}
-            			}
-            		}
-            		
-            	}
-            //end etapa (2)
+
+            for( String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
+                for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
+                    if(p.isDotEnd() == false){
+                        if(p.getElementAtDot().equals(sentence[i-1])){//se o elemento pos ponto for igual a palavra da pessoa
+                            //significa que eu tenho de adicionar a regra no conjunto de produï¿½ï¿½es atual
+                            Production newP = new Production(p);
+                            newP.incDot();
+                            state.addRule(a, newP);
+                        }
+                    }
+                }
+
+            }
 
             boolean increased;
             //inicio etapa 3
@@ -109,6 +116,7 @@ public class EarlyParser {
                             				 Production novissima = new Production(producaoDeCadaVariavel);
                             				 novissima.incDot();
                             				 state.addRule(b, novissima);
+                            				 increased = true;
                             			 }
                             		 }
                             	 }
@@ -123,30 +131,13 @@ public class EarlyParser {
 	                            		nova.setDotPos(0);
 	                            		nova.setProductionSet(i);
 	                            		state.addRule(b, nova);
+	                            		increased = true;
 	                            	}
 	                            }
                         }
                         count = j;
                     }
-                //end: etapa(3)*/
 
-
-                //TODO: etapa(4)
-                // se o ponto esta no final da palavra, pegar o valor que esta no /numero e avançar o ponto, por fim, 
-                //colocá-lo no array de variaveis do estado atual
-                
-              /*  for( String a: state.getVariables()){
-                    for (Production p : state.getProductions(a)){
-                        	if(p.isDotEnd() == true){
-                            	//ta no final da palavra, vou pegar a nova coisa pra add aq
-                        		ArrayList<Production> newProductions= new ArrayList<>();
-                        		newProductions.add(p);//pego a production aq
-			//state.addRule(a, newP); fazer p array list
-                            }
-                            	
-                        }
-                }*/
-                    	
             }while (increased);
 
             states.add(state);

@@ -19,8 +19,9 @@ public class Main {
 
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
-       // e.buildStateZero();
-        e.parse("the dog is");
+
+        //e.parse("number + ");
+        e.buildStateZero();
         e.printStates();
 
     }

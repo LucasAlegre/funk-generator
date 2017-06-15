@@ -50,11 +50,11 @@ public class EarlyParser {
                         if (EarlyParser.isVariable(b)) {
                             if(!variables.contains(b))
                                 variables.add(b);
-                            for (Production p2 : grammar.getProductions(b)) {
+                            for (Production p2 : grammar.getProductions(b)) { //coloca todas regras no temp de tal variavel
                                 Production prod = new Production(p2);
                                 prod.setDotPos(0);
                                 prod.setProductionSet(0);
-                                if(!stateZero.getVariables().contains(b)) {
+                                if(!stateZero.getVariables().contains(b)) {//só coloca uma vez
                                     temp.addRule(b, prod);
                                     increased = true;
                                 }
@@ -97,47 +97,72 @@ public class EarlyParser {
                 }
 
             }
-
+//-------fim da etapa 02----
             boolean increased;
-            //inicio etapa 3
-            ArrayList<String> variables = new ArrayList<String>(state.getVariables());
-            int count = 0;
+        
             do{
                 increased = false;
-                    for(int j = count; j < variables.size(); j++){
-                        for(Production p : state.getProductions(variables.get(j))){
-                            if(p.isDotEnd()){
-                             int s2 = p.getProductionSet();//devolve a zero essa linha
-                             String A = variables.get(j);//Np->b*/0 devolve a np essa linha
-                             for(String b: states.get(s2).getVariables()){ //states.get devolve a gramatica e pego as variaveis dela
-                            	 //buscar todas as regras que tem np no ds2, tipo, no d0
-                            	 for(Production producaoDeCadaVariavel: states.get(s2).getProductions(b)){
-                            		 if(!producaoDeCadaVariavel.isDotEnd()){
-                            			 if(producaoDeCadaVariavel.getElementAtDot().equals(A)){
-                            				 Production novissima = new Production(producaoDeCadaVariavel);
-                            				 novissima.incDot();
-                            				 state.addRule(b, novissima);
-                            				 increased = true;
-                            			 }
-                            		 }
-                            	 }
-                             }
-                            	//vai pro estado 3 se nao vai pro 4
-                            }
-	                         else{
-	                            	System.out.println("estado 3");
-	                            	String b = p.getElementAtDot();
-	                            	for(Production backToGramatica: grammar.getProductions(b)){
-	                            		Production nova = new Production(backToGramatica);
-	                            		nova.setDotPos(0);
-	                            		nova.setProductionSet(i);
-	                            		state.addRule(b, nova);
-	                            		increased = true;
-	                            	}
-	                            }
-                        }
-                        count = j;
-                    }
+              //inicio etapa 3
+                Grammar temp = new Grammar();
+                boolean out = false;
+               do{
+            	   out = true;
+	                for(String A : state.getVariables()){
+	                	for(Production p: state.getProductions(A)){
+	                		if(out == true){
+		                		if(p.isDotEnd() == false){
+		                			String B = p.getElementAtDot();
+		                			for(Production prod: grammar.getProductions(B)){
+		                				Production newP = new Production(prod);
+		                                newP.setDotPos(0); //seta nova posição do ponto
+		                                newP.setProductionSet(i);//seta em qual produção veio-> o slash
+		                              if(!state.getVariables().contains(B)){
+		                                temp.addRule(B, newP);//adiciona a regra nova
+		                                increased = true;
+		                                out = false;
+		                              }
+		                			}
+		                		}
+	                		}
+	                	}
+	                }
+	                state.adiciona(temp);
+	           }while(!out);
+               
+               out = false;
+               do{
+            	   out = true;
+	                for(String A : state.getVariables()){
+	                	for(Production p: state.getProductions(A)){
+	                		if(out == true){
+		                		if(p.isDotEnd() == true){
+		                			int s2 = p.getProductionSet();
+		                			Grammar stateS = states.get(s2);
+		                			for(String varDeS: stateS.getVariables()){
+		                				for(Production pDeS: stateS.getProductions(varDeS)){
+		                					if(pDeS.isDotEnd() == false){
+		                						String alpha = pDeS.getElementAtDot();
+		                						if(alpha.equals(A)){
+		                							Production newP = new Production(pDeS);
+		    		                                newP.incDot(); //seta nova posição do ponto
+		                						if(!state.getVariables().contains(varDeS)){
+		    		                                temp.addRule(varDeS, newP);//adiciona a regra nova
+		    		                                increased = true;
+		    		                                out = false;
+		    		                              }
+		                						}
+		                					}
+		                				}
+		                			}
+		                		}
+	                		}
+	                	}
+	                }
+	                state.adiciona(temp);
+               }while(!out);
+               	
+                
+                    
 
             }while (increased);
 

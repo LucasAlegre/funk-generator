@@ -148,7 +148,7 @@ public class Grammar {
                 for(int i = 0; i < rightSide.size()+1; i++){ //+1 due to possibility of * in the end of the world
                     if(i == p.getDotPos())
                         System.out.print(" * ");
-                    if(i != rightSide.size())
+                    if(i != rightSide.size())//p n dar erro de pegar um null no get
                     	System.out.print("[ " + rightSide.get(i) + " ]");
                 }
                 if(p.getProductionSet() != -1)

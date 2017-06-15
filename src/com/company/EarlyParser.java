@@ -91,50 +91,61 @@ public class EarlyParser {
             //end etapa (2)
 
             boolean increased;
-           // Grammar stateThree = new Grammar();
-           // ArrayList<String> variables = new ArrayList<String>(stateThree.getVariables());
-            //int countOfStateThree = 0;
-
+            //inicio etapa 3
+            ArrayList<String> variables = new ArrayList<String>(state.getVariables());
+            int count = 0;
             do{
                 increased = false;
-                  /*  for(int j = countOfStateThree; j < variables.size(); j++){
-                        for(Production p : stateThree.getProductions(variables.get(j))){
-                            String b = p.getFirstElement();
-
-                            if(EarlyParser.isVariable(b)){
-                                variables.add(b);
-                                for(Production p2 : grammar.getProductions(b)){
-                                    Production prod = new Production(p2);
-                                    prod.setDotPos(0);
-                                    prod.setProductionSet(0);
-                                    stateThree.addRule(b, prod);
-                                    increased = true;
-                                }
+                    for(int j = count; j < variables.size(); j++){
+                        for(Production p : state.getProductions(variables.get(j))){
+                            if(p.isDotEnd()){
+                             int s2 = p.getProductionSet();//devolve a zero essa linha
+                             String A = variables.get(j);//Np->b*/0 devolve a np essa linha
+                             for(String b: states.get(s2).getVariables()){ //states.get devolve a gramatica e pego as variaveis dela
+                            	 //buscar todas as regras que tem np no ds2, tipo, no d0
+                            	 for(Production producaoDeCadaVariavel: states.get(s2).getProductions(b)){
+                            		 if(!producaoDeCadaVariavel.isDotEnd()){
+                            			 if(producaoDeCadaVariavel.getElementAtDot().equals(A)){
+                            				 Production novissima = new Production(producaoDeCadaVariavel);
+                            				 novissima.incDot();
+                            				 state.addRule(b, novissima);
+                            			 }
+                            		 }
+                            	 }
+                             }
+                            	//vai pro estado 3 se nao vai pro 4
                             }
+	                         else{
+	                            	System.out.println("estado 3");
+	                            	String b = p.getElementAtDot();
+	                            	for(Production backToGramatica: grammar.getProductions(b)){
+	                            		Production nova = new Production(backToGramatica);
+	                            		nova.setDotPos(0);
+	                            		nova.setProductionSet(i);
+	                            		state.addRule(b, nova);
+	                            	}
+	                            }
                         }
                         count = j;
                     }
-
-                states.add(stateThree);
-            }
-                //TODO: etapa(3)*/
+                //end: etapa(3)*/
 
 
                 //TODO: etapa(4)
                 // se o ponto esta no final da palavra, pegar o valor que esta no /numero e avançar o ponto, por fim, 
                 //colocá-lo no array de variaveis do estado atual
-                Grammar actualState = states.get(i);
-                for( String a: actualState.getVariables()){
-                    for (Production p : actualState.getProductions(a)){
+                
+              /*  for( String a: state.getVariables()){
+                    for (Production p : state.getProductions(a)){
                         	if(p.isDotEnd() == true){
                             	//ta no final da palavra, vou pegar a nova coisa pra add aq
                         		ArrayList<Production> newProductions= new ArrayList<>();
-                        		newProductions.add(e);\\pego a production aq
+                        		newProductions.add(p);//pego a production aq
 			//state.addRule(a, newP); fazer p array list
                             }
                             	
                         }
-                }
+                }*/
                     	
             }while (increased);
 

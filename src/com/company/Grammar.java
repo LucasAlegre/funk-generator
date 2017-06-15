@@ -145,10 +145,11 @@ public class Grammar {
             for (Production p : rules.get(var)){
                 System.out.print(var + " -> ");
                 ArrayList<String> rightSide = p.getVarOrTerminals();
-                for(int i = 0; i < rightSide.size(); i++){
+                for(int i = 0; i < rightSide.size()+1; i++){ //+1 due to possibility of * in the end of the world
                     if(i == p.getDotPos())
                         System.out.print(" * ");
-                    System.out.print("[ " + rightSide.get(i) + " ]");
+                    if(i != rightSide.size())
+                    	System.out.print("[ " + rightSide.get(i) + " ]");
                 }
                 if(p.getProductionSet() != -1)
                     System.out.print("/" + p.getProductionSet());

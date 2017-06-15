@@ -4,9 +4,7 @@ import javafx.util.Pair;
 
 import java.util.*;
 
-/**
- * Created by lucas on 01/06/17.
- */
+
 public class EarlyParser {
 
     private Grammar grammar;
@@ -90,19 +88,54 @@ public class EarlyParser {
             		}
             		
             	}
-            //TODO: etapa (2)
+            //end etapa (2)
 
             boolean increased;
+           // Grammar stateThree = new Grammar();
+           // ArrayList<String> variables = new ArrayList<String>(stateThree.getVariables());
+            //int countOfStateThree = 0;
+
             do{
                 increased = false;
+                  /*  for(int j = countOfStateThree; j < variables.size(); j++){
+                        for(Production p : stateThree.getProductions(variables.get(j))){
+                            String b = p.getFirstElement();
 
-                //TODO: etapa(3)
+                            if(EarlyParser.isVariable(b)){
+                                variables.add(b);
+                                for(Production p2 : grammar.getProductions(b)){
+                                    Production prod = new Production(p2);
+                                    prod.setDotPos(0);
+                                    prod.setProductionSet(0);
+                                    stateThree.addRule(b, prod);
+                                    increased = true;
+                                }
+                            }
+                        }
+                        count = j;
+                    }
+
+                states.add(stateThree);
+            }
+                //TODO: etapa(3)*/
 
 
                 //TODO: etapa(4)
-
-
-
+                // se o ponto esta no final da palavra, pegar o valor que esta no /numero e avançar o ponto, por fim, 
+                //colocá-lo no array de variaveis do estado atual
+                Grammar actualState = states.get(i);
+                for( String a: actualState.getVariables()){
+                    for (Production p : actualState.getProductions(a)){
+                        	if(p.isDotEnd() == true){
+                            	//ta no final da palavra, vou pegar a nova coisa pra add aq
+                        		ArrayList<Production> newProductions= new ArrayList<>();
+                        		newProductions.add(e);\\pego a production aq
+			//state.addRule(a, newP); fazer p array list
+                            }
+                            	
+                        }
+                }
+                    	
             }while (increased);
 
             states.add(state);

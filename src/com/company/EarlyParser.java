@@ -76,7 +76,18 @@ public class EarlyParser {
 
         for(int i = 1; i <= sentence.length; i++){
             Grammar state = new Grammar();
-
+            Grammar previousState = states.get(i-1);
+            	for( String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
+            		for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
+            			if(p.getElementAtDot().equals(sentence[i-1])){//se o elemento pos ponto for igual a palavra da pessoa
+            				//significa que eu tenho de adicionar a regra no conjunto de produções atual
+            				Production newP = new Production(p); 
+            				newP.incDot();
+            				state.addRule(a, newP);
+            			}
+            		}
+            		
+            	}
             //TODO: etapa (2)
 
             boolean increased;

@@ -20,8 +20,12 @@ public class Main {
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
 
-        e.parse("number + number * number");
-        e.printStates();
+        boolean isrecognized = e.parse("number + number * number");
+        if(isrecognized){
+        	e.printStates();
+        }
+        else
+        	System.out.println("Sua palavra nao faz parte da linguagem :/");
 
     }
 

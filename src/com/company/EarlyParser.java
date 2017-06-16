@@ -23,6 +23,7 @@ public class EarlyParser {
     public void setGrammar(Grammar grammar) {
         this.grammar = grammar;
     }
+    int lastPassageOfAlgoritm = 0; // globar varibale to get the number of the last passage of algorithm
 
     public void buildStateZero(){
 
@@ -54,7 +55,7 @@ public class EarlyParser {
                                 Production prod = new Production(p2);
                                 prod.setDotPos(0);
                                 prod.setProductionSet(0);
-                                if(!stateZero.getVariables().contains(b)) {//s� coloca uma vez
+                                if(!stateZero.getVariables().contains(b)) { //como iteramos sobre tudo varias vezes, isso evita de ser colocado duas vezes
                                     temp.addRule(b, prod);
                                     increased = true;
                                 }
@@ -70,7 +71,7 @@ public class EarlyParser {
         states.add(stateZero);
     }
 
-    public void parse(String s){
+    public boolean parse(String s){
 
         // Sentence to be parsed
         String[] sentence = s.split(" ");
@@ -166,11 +167,23 @@ public class EarlyParser {
                }while(!out);
 
             }while (increased);
-
-            states.add(state);
+            lastPassageOfAlgoritm = i;
+            states.add(state);            
         }
-
-        //TODO: check se parseou ou não
+ //checa que o parsing foi concluido, ou seja, se tem um */0 em alguma das productions da gramatica 
+        Grammar lastGrammar = states.get(lastPassageOfAlgoritm);
+        lastGrammar.printGrammar();
+        for(String A: lastGrammar.getVariables() ){
+        	for (Production ofLastGrammar : lastGrammar.getProductions(A)) {
+        		if(ofLastGrammar.isDotEnd() == true){ // se o ponto ta no final ainda preciso verificar se e o /0
+        			if(ofLastGrammar.getProductionSet() == 0){
+        				return true;
+        			}
+        		}
+        	}
+        }
+        return false;
+        
 
     }
 

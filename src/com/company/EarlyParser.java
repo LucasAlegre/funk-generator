@@ -54,7 +54,7 @@ public class EarlyParser {
                                 Production prod = new Production(p2);
                                 prod.setDotPos(0);
                                 prod.setProductionSet(0);
-                                if(!stateZero.getVariables().contains(b)) {//só coloca uma vez
+                                if(!stateZero.getVariables().contains(b)) {//sï¿½ coloca uma vez
                                     temp.addRule(b, prod);
                                     increased = true;
                                 }
@@ -99,38 +99,42 @@ public class EarlyParser {
             }
 //-------fim da etapa 02----
             boolean increased;
-        
             do{
                 increased = false;
               //inicio etapa 3
-                Grammar temp = new Grammar();
+
                 boolean out = false;
                do{
+                   Grammar temp = new Grammar();
             	   out = true;
 	                for(String A : state.getVariables()){
 	                	for(Production p: state.getProductions(A)){
 	                		if(out == true){
 		                		if(p.isDotEnd() == false){
 		                			String B = p.getElementAtDot();
-		                			for(Production prod: grammar.getProductions(B)){
-		                				Production newP = new Production(prod);
-		                                newP.setDotPos(0); //seta nova posição do ponto
-		                                newP.setProductionSet(i);//seta em qual produção veio-> o slash
-		                              if(!state.getVariables().contains(B)){
-		                                temp.addRule(B, newP);//adiciona a regra nova
-		                                increased = true;
-		                                out = false;
-		                              }
-		                			}
+                                    if(!state.getVariables().contains(B)) {
+                                        if(EarlyParser.isVariable(B)) {
+                                            for (Production prod : grammar.getProductions(B)) {
+                                                Production newP = new Production(prod);
+                                                newP.setDotPos(0); //seta nova posiï¿½ï¿½o do ponto
+                                                newP.setProductionSet(i);//seta em qual produï¿½ï¿½o veio-> o slash
+
+                                                temp.addRule(B, newP);//adiciona a regra nova
+                                                increased = true;
+                                                out = false;
+                                            }
+                                        }
+                                    }
 		                		}
 	                		}
 	                	}
-	                }
+                    }
 	                state.adiciona(temp);
 	           }while(!out);
                
                out = false;
                do{
+                   Grammar temp = new Grammar();
             	   out = true;
 	                for(String A : state.getVariables()){
 	                	for(Production p: state.getProductions(A)){
@@ -139,20 +143,20 @@ public class EarlyParser {
 		                			int s2 = p.getProductionSet();
 		                			Grammar stateS = states.get(s2);
 		                			for(String varDeS: stateS.getVariables()){
-		                				for(Production pDeS: stateS.getProductions(varDeS)){
-		                					if(pDeS.isDotEnd() == false){
-		                						String alpha = pDeS.getElementAtDot();
-		                						if(alpha.equals(A)){
-		                							Production newP = new Production(pDeS);
-		    		                                newP.incDot(); //seta nova posição do ponto
-		                						if(!state.getVariables().contains(varDeS)){
-		    		                                temp.addRule(varDeS, newP);//adiciona a regra nova
-		    		                                increased = true;
-		    		                                out = false;
-		    		                              }
-		                						}
-		                					}
-		                				}
+                                        for (Production pDeS : stateS.getProductions(varDeS)) {
+                                            if (pDeS.isDotEnd() == false) {
+                                                String alpha = pDeS.getElementAtDot();
+                                                if (alpha.equals(A)) {
+                                                    Production newP = new Production(pDeS);
+                                                    newP.incDot(); //seta nova posiï¿½ï¿½o do ponto
+                                                    if(!state.containsRule(varDeS, newP)) {
+                                                        temp.addRule(varDeS, newP);//adiciona a regra nova
+                                                        increased = true;
+                                                        out = false;
+                                                    }
+                                                }
+                                            }
+                                        }
 		                			}
 		                		}
 	                		}
@@ -160,9 +164,6 @@ public class EarlyParser {
 	                }
 	                state.adiciona(temp);
                }while(!out);
-               	
-                
-                    
 
             }while (increased);
 

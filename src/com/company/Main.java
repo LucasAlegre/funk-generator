@@ -21,7 +21,6 @@ public class Main {
         e.setGrammar(funk);
 
         e.parse("number + number * number");
-      //  e.buildStateZero();
         e.printStates();
 
     }

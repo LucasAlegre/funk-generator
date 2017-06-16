@@ -44,7 +44,9 @@ public class Grammar {
     }
 
     public ArrayList<Production> getProductions(String var){
-        return rules.get(var);
+        if(rules.containsKey(var))
+            return rules.get(var);
+        return null;
     }
 
     public void addRule(String var, ArrayList<String> production){
@@ -69,6 +71,16 @@ public class Grammar {
             newProduction.add(production);
             rules.put(var, newProduction);
         }
+    }
+
+    public boolean containsRule(String var, Production p){
+        if(rules.containsKey(var)){
+            for(Production p2 : rules.get(var)){
+                if(p2.equals(p))
+                    return true;
+            }
+        }
+        return false;
     }
 
     public void addRule(String var, Production production){
@@ -135,6 +147,7 @@ public class Grammar {
                     this.addRule(variavel, new Production(bufferOfRules), probability);
                     break;
             }
+
         }
         sc.close();
 

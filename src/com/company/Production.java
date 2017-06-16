@@ -48,8 +48,24 @@ public class Production {
         varOrTerminals = p.getVarOrTerminals();
         dotPos = p.getDotPos();
         productionSet = p.getProductionSet();
-        probability = p.getProbability();;
+        probability = p.getProbability();
 
+    }
+
+    public boolean equals(Production obj) {
+        if(dotPos == obj.dotPos){
+            if(this.varOrTerminals.size() == obj.getVarOrTerminals().size()){
+                for(int i = 0; i < varOrTerminals.size(); i++){
+                    if(!varOrTerminals.get(i).equals(obj.getVarOrTerminals().get(i)))
+                        return false;
+                }
+                return true;
+            }
+            else
+                return false;
+        }
+        else
+            return false;
     }
 
     public ArrayList<String> getVarOrTerminals() {

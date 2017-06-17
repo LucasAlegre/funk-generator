@@ -24,7 +24,7 @@ public class EarlyParser {
         this.grammar = grammar;
     }
 
-    public void buildStateZero(){
+    private void buildStateZero(){
 
         Grammar stateZero = new Grammar();
 
@@ -118,6 +118,7 @@ public class EarlyParser {
                                    if(!state.getVariables().contains(B)) {
                                        if(EarlyParser.isVariable(B)) {
                                            for(Production prod : grammar.getProductions(B)) {
+
                                                Production newP = new Production(prod);
                                                newP.setDotPos(0); //seta nova posi��o do ponto
                                                newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
@@ -142,7 +143,7 @@ public class EarlyParser {
             	   out = true;
 	                for(String A : state.getVariables()){
 	                    for(Production p: state.getProductions(A)){
-	                        if(out == true){
+	                       // if(out == true){
 	                            if(p.isDotEnd() == true){
 	                                int s2 = p.getProductionSet();
 		                			Grammar stateS = states.get(s2);
@@ -152,9 +153,9 @@ public class EarlyParser {
 		                			            String alpha = pDeS.getElementAtDot();
                                                 if(alpha.equals(A)) {
                                                     Production newP = new Production(pDeS);
-                                                    newP.incDot(); //seta nova posi��o do ponto
+                                                    newP.incDot();
                                                     if(!state.containsRule(varDeS, newP)) {
-                                                        temp.addRule(varDeS, newP);//adiciona a regra nova
+                                                        temp.addRule(varDeS, newP);
                                                         increased = true;
                                                         out = false;
                                                     }
@@ -163,13 +164,13 @@ public class EarlyParser {
                                         }
 		                			}
 		                		}
-	                		}
+	                		//}
 	                	}
 	                }
 	                state.adiciona(temp);
                }while(!out); //End Step(4)
 
-            }while (increased);
+            }while(increased); //While new rules are being added
 
             states.add(state);            
         }

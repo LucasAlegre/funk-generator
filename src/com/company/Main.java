@@ -21,7 +21,7 @@ public class Main {
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
 
-        boolean isRecognized = e.parse("number + number * number");
+        boolean isRecognized = e.parse("the dog eats the meat");
         if(isRecognized)
         	e.printStates();
         else

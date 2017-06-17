@@ -15,17 +15,17 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         Grammar funk = new Grammar("txtTest.txt");
+        System.out.println("Grammar read:");
         funk.printGrammar();
 
         EarlyParser e = new EarlyParser();
         e.setGrammar(funk);
 
-        boolean isrecognized = e.parse("number + number * number");
-        if(isrecognized){
+        boolean isRecognized = e.parse("number + number * number");
+        if(isRecognized)
         	e.printStates();
-        }
         else
-        	System.out.println("Sua palavra nao faz parte da linguagem :/");
+        	System.out.println("The sentence given is not part of the language!");
 
     }
 

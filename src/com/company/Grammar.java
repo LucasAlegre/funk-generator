@@ -28,6 +28,7 @@ public class Grammar {
         }
         catch (Exception e){
             System.out.println( e.getMessage() );
+            e.printStackTrace();
         }
     }
 
@@ -132,9 +133,10 @@ public class Grammar {
                     float probability=0;
                     int indexS = 0, indexE = 0;
                     char c;
-                    for(int j = buff.indexOf('>'); j<buff.length(); j++){
+                    for(int j = buff.indexOf('>'); j < buff.length(); j++){
                         c = buff.charAt(j);
-                        if(c == '[') indexS = j;
+                        if(c == '[')
+                            indexS = j;
                         if(c == ']'){
                             indexE = j;
                             bufferOfRules.add(buff.substring(indexS+2, indexE-1));

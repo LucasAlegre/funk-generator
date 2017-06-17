@@ -10,7 +10,7 @@ public class EarlyParser {
     private Grammar grammar;
     private ArrayList<Grammar> states;
     private String sentence;
-    private String funkGenerated;
+    private String sentenceGenerated;
 
     public EarlyParser(){
         states = new ArrayList<Grammar>();
@@ -23,7 +23,6 @@ public class EarlyParser {
     public void setGrammar(Grammar grammar) {
         this.grammar = grammar;
     }
-    int lastPassageOfAlgoritm = 0; // globar varibale to get the number of the last passage of algorithm
 
     public void buildStateZero(){
 
@@ -79,16 +78,19 @@ public class EarlyParser {
         // Build state 0
         buildStateZero();
 
+        int numberOfWords = sentence.length;
+
         // Step (1)
-        for(int i = 1; i <= sentence.length; i++){
+        for(int i = 1; i <= numberOfWords; i++){
             Grammar state = new Grammar();
+            String actualWord = sentence[i - 1];
+
             // Step (2)
             Grammar previousState = states.get(i-1);
-
             for( String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
                 for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
                     if(p.isDotEnd() == false){
-                        if(p.getElementAtDot().equals(sentence[i-1])){//se o elemento pos ponto for igual a palavra da pessoa
+                        if(p.getElementAtDot().equals(actualWord)){//se o elemento pos ponto for igual a palavra da pessoa
                             //significa que eu tenho de adicionar a regra no conjunto de produ��es atual
                             Production newP = new Production(p);
                             newP.incDot();
@@ -97,32 +99,32 @@ public class EarlyParser {
                     }
                 }
 
-            }
-//-------fim da etapa 02----
+            }//End Step (2)
+
             boolean increased;
             do{
                 increased = false;
-              //inicio etapa 3
 
+                //Step (3)
                 boolean out = false;
-               do{
+                do{
                    Grammar temp = new Grammar();
             	   out = true;
-	                for(String A : state.getVariables()){
-	                	for(Production p: state.getProductions(A)){
-	                		if(out == true){
-		                		if(p.isDotEnd() == false){
-		                			String B = p.getElementAtDot();
-                                    if(!state.getVariables().contains(B)) {
-                                        if(EarlyParser.isVariable(B)) {
-                                            for (Production prod : grammar.getProductions(B)) {
-                                                Production newP = new Production(prod);
-                                                newP.setDotPos(0); //seta nova posi��o do ponto
-                                                newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
+            	   for(String A : state.getVariables()){
+            	       for(Production p: state.getProductions(A)){
+            	           if(out == true){
+            	               if(p.isDotEnd() == false){
+                                   String B = p.getElementAtDot();
+                                   if(!state.getVariables().contains(B)) {
+                                       if(EarlyParser.isVariable(B)) {
+                                           for(Production prod : grammar.getProductions(B)) {
+                                               Production newP = new Production(prod);
+                                               newP.setDotPos(0); //seta nova posi��o do ponto
+                                               newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
 
-                                                temp.addRule(B, newP);//adiciona a regra nova
-                                                increased = true;
-                                                out = false;
+                                               temp.addRule(B, newP);//adiciona a regra nova
+                                               increased = true;
+                                               out = false;
                                             }
                                         }
                                     }
@@ -131,23 +133,24 @@ public class EarlyParser {
 	                	}
                     }
 	                state.adiciona(temp);
-	           }while(!out);
-               
+	           }while(!out);  //End Step (3)
+
+               //Step (4)
                out = false;
                do{
                    Grammar temp = new Grammar();
             	   out = true;
 	                for(String A : state.getVariables()){
-	                	for(Production p: state.getProductions(A)){
-	                		if(out == true){
-		                		if(p.isDotEnd() == true){
-		                			int s2 = p.getProductionSet();
+	                    for(Production p: state.getProductions(A)){
+	                        if(out == true){
+	                            if(p.isDotEnd() == true){
+	                                int s2 = p.getProductionSet();
 		                			Grammar stateS = states.get(s2);
 		                			for(String varDeS: stateS.getVariables()){
-                                        for (Production pDeS : stateS.getProductions(varDeS)) {
-                                            if (pDeS.isDotEnd() == false) {
-                                                String alpha = pDeS.getElementAtDot();
-                                                if (alpha.equals(A)) {
+		                			    for(Production pDeS : stateS.getProductions(varDeS)) {
+		                			        if(pDeS.isDotEnd() == false) {
+		                			            String alpha = pDeS.getElementAtDot();
+                                                if(alpha.equals(A)) {
                                                     Production newP = new Production(pDeS);
                                                     newP.incDot(); //seta nova posi��o do ponto
                                                     if(!state.containsRule(varDeS, newP)) {
@@ -164,26 +167,26 @@ public class EarlyParser {
 	                	}
 	                }
 	                state.adiciona(temp);
-               }while(!out);
+               }while(!out); //End Step(4)
 
             }while (increased);
-            lastPassageOfAlgoritm = i;
+
             states.add(state);            
         }
- //checa que o parsing foi concluido, ou seja, se tem um */0 em alguma das productions da gramatica 
-        Grammar lastGrammar = states.get(lastPassageOfAlgoritm);
-        lastGrammar.printGrammar();
-        for(String A: lastGrammar.getVariables() ){
-        	for (Production ofLastGrammar : lastGrammar.getProductions(A)) {
-        		if(ofLastGrammar.isDotEnd() == true){ // se o ponto ta no final ainda preciso verificar se e o /0
-        			if(ofLastGrammar.getProductionSet() == 0){
-        				return true;
-        			}
-        		}
-        	}
+
+        //Check if the sentence was succesfully parsed
+        //There must be a "InitialVariable -> a * /0" rule in the last state
+        Grammar lastState = states.get(numberOfWords);
+        for(String A: lastState.getVariables() ){
+            if(A == grammar.getInitialVariable()) {
+                for (Production ofLastGrammar : lastState.getProductions(A)) {
+                    if (ofLastGrammar.isDotEnd() == true && ofLastGrammar.getProductionSet() == 0) {
+                        return true;
+                    }
+                }
+            }
         }
         return false;
-        
 
     }
 

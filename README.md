@@ -1,15 +1,15 @@
 # FunkGenerator
 
-//----------------STILL IN DEVELOPMENT
+//--- STILL IN DEVELOPMENT
 
-This is a third semestrer college project, in witch we did a Funk Generator using Early algorithm. So we implement a parse using early algorithm.
+This is a third semestrer college project, in witch we did a Funk Generator using Earley algorithm. So we implement a parse using earley algorithm.
 
 # The structures used were:
 
 # To run the project you have to do:
 # How the archieve with your grammar has to be sent
 
-*Contributers:
+Contributers:
 https://github.com/cvrnogueira
 
-*https://github.com/gujueno
+https://github.com/gujueno

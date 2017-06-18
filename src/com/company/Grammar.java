@@ -5,14 +5,18 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * Created by lucas on 01/06/17.
+ *  Grammar Class
  */
 public class Grammar {
+
     public HashMap<String, ArrayList<Production>> rules;
     private String initialVariable;
     private HashSet<String> variables;
     private HashSet<String> terminals;
 
+    /**
+     * Default constructor.
+     */
     public Grammar(){
 
         this.rules = new HashMap<String, ArrayList<Production>>();
@@ -20,6 +24,10 @@ public class Grammar {
         this.terminals = new HashSet<String>();
     }
 
+    /**
+     *  Builds a grammar from the txt file.
+     * @param file The file which contains the grammar.
+     */
     public Grammar(String file){
         this();
 
@@ -32,24 +40,12 @@ public class Grammar {
         }
     }
 
-    public Set<String> getVariables(){
-        return rules.keySet();
-    }
-
-    public String getInitialVariable() {
-        return initialVariable;
-    }
-
-    public void setInitialVariable(String initialVariable) {
-        this.initialVariable = initialVariable;
-    }
-
-    public ArrayList<Production> getProductions(String var){
-        if(rules.containsKey(var))
-            return rules.get(var);
-        return null;
-    }
-
+    /**
+     * Check if the grammar contains the given rule.
+     * @param var Left side of the rule
+     * @param production Right side of the rule
+     * @return True if it contains, false otherwise.
+     */
     public void addRule(String var, ArrayList<String> production){
         if(rules.containsKey(var))
             rules.get(var).add(new Production(production));
@@ -74,6 +70,12 @@ public class Grammar {
         }
     }
 
+    /**
+     * Check if the grammar contains the given rule.
+     * @param var Left side of the rule
+     * @param p Right side of the rule
+     * @return True if it contains, false otherwise.
+     */
     public boolean containsRule(String var, Production p){
         if(rules.containsKey(var)){
             for(Production p2 : rules.get(var)){
@@ -84,6 +86,11 @@ public class Grammar {
         return false;
     }
 
+    /**
+     * Add a rule to the grammar.
+     * @param var Var on the lef side.
+     * @param production Rigth side of the rule.
+     */
     public void addRule(String var, Production production){
 
         if(rules.containsKey(var))
@@ -97,6 +104,12 @@ public class Grammar {
         }
     }
 
+    /**
+     * Reads the variables, terminals and rules from the txt file.
+     * Obs: There must not be '\t' tab character in the file.
+     * @param text The name of the txt file
+     * @throws FileNotFoundException
+     */
     public void readFile(String text) throws FileNotFoundException{
         File tst = new File(text);
         Scanner sc = new Scanner(tst);
@@ -106,8 +119,8 @@ public class Grammar {
 
         while(sc.hasNext()){
             buff = sc.nextLine();
-            if(buff.compareTo("Variaveis") == 0 || buff.compareTo("Inicial") == 0|| buff.compareTo("Regras") == 0){
-                opFlag = buff;
+            if(buff.contains("Variaveis") || buff.contains("Inicial") || buff.contains("Regras") ){
+                opFlag = buff.substring(0, buff.indexOf(' '));
                 buff = sc.nextLine();
             }
             switch(opFlag){
@@ -130,20 +143,23 @@ public class Grammar {
                     String variavel;
                     variavel = buff.substring(buff.indexOf('[')+2, buff.indexOf(']')-1);
                     ArrayList<String> bufferOfRules = new ArrayList<>();
-                    float probability=0;
+                    float probability = 1; //default
                     int indexS = 0, indexE = 0;
                     char c;
-                    for(int j = buff.indexOf('>'); j < buff.length(); j++){
+                    for(int j = buff.indexOf('>'); j<buff.length(); j++){
                         c = buff.charAt(j);
-                        if(c == '[')
-                            indexS = j;
+                        if(c == '[') indexS = j;
                         if(c == ']'){
                             indexE = j;
                             bufferOfRules.add(buff.substring(indexS+2, indexE-1));
                         }
                         if(c==';'){
                             indexS = j;
-                            probability = Float.valueOf(buff.substring(indexS+1));
+                            try {
+                                probability = Float.valueOf(buff.substring(indexS+1, indexS + 5));
+                            }catch (IndexOutOfBoundsException exc){
+                                probability = Float.valueOf(buff.substring(indexS+1));
+                            }
                         }
                     }
                     this.addRule(variavel, new Production(bufferOfRules), probability);
@@ -152,10 +168,13 @@ public class Grammar {
 
         }
         sc.close();
-
     }
 
-    public void adiciona(Grammar g){
+    /**
+     * Add all rules from the grammar giver to its rules
+     * @param g Grammar to have its rules copied
+     */
+    public void addRules(Grammar g){
         for(String s : g.getVariables()){
             for(Production p : g.getProductions(s)){
                 addRule(s, p);
@@ -163,6 +182,10 @@ public class Grammar {
         }
     }
 
+    /**
+     *  Print all the rules of the grammar.
+     *  In case it is a State, also prints the dot and the number of the set of each rule.
+     */
     public void printGrammar(){
         for(String var : rules.keySet()) {
             for (Production p : rules.get(var)){
@@ -180,6 +203,27 @@ public class Grammar {
                 System.out.println();
             }
         }
+    }
+
+    /**
+     *   Getters and Setters
+     */
+    public Set<String> getVariables(){
+        return rules.keySet();
+    }
+
+    public String getInitialVariable() {
+        return initialVariable;
+    }
+
+    public void setInitialVariable(String initialVariable) {
+        this.initialVariable = initialVariable;
+    }
+
+    public ArrayList<Production> getProductions(String var){
+        if(rules.containsKey(var))
+            return rules.get(var);
+        return null;
     }
 
 }

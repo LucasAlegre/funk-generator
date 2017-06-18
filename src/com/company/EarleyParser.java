@@ -1,29 +1,44 @@
 package com.company;
 
-import javafx.util.Pair;
-
 import java.util.*;
 
-
-public class EarlyParser {
+/**
+ *  Class to implement the Earley Algorithm
+ */
+public class EarleyParser {
 
     private Grammar grammar;
     private ArrayList<Grammar> states;
     private String sentence;
     private String sentenceGenerated;
 
-    public EarlyParser(){
+    /**
+     *  Dafault constructor
+     */
+    public EarleyParser(){
         states = new ArrayList<Grammar>();
     }
 
+    /**
+     * Gets the actual grammar.
+     * @return The grammar
+     */
     public Grammar getGrammar() {
         return grammar;
     }
 
+    /**
+     * Sets the grammar that will be used in the Earley Algorithm
+     * @param grammar The grammar given
+     */
     public void setGrammar(Grammar grammar) {
         this.grammar = grammar;
     }
 
+    /**
+     *  Builds the first set of productions,
+     *  the productions that can be applied in successive applications of the initial variable.
+     */
     private void buildStateZero(){
 
         Grammar stateZero = new Grammar();
@@ -47,7 +62,7 @@ public class EarlyParser {
                 Grammar temp = new Grammar();
                 for(Production p : stateZero.getProductions(variables.get(i))){
                     String b = p.getFirstElement();
-                        if (EarlyParser.isVariable(b)) {
+                        if (EarleyParser.isVariable(b)) {
                             if(!variables.contains(b))
                                 variables.add(b);
                             for (Production p2 : grammar.getProductions(b)) { //coloca todas regras no temp de tal variavel
@@ -62,7 +77,7 @@ public class EarlyParser {
                         }
                 }
                 count = i;
-                stateZero.adiciona(temp);
+                stateZero.addRules(temp);
             }
 
         }while(increased); // While there is rules to add
@@ -70,6 +85,11 @@ public class EarlyParser {
         states.add(stateZero);
     }
 
+    /**
+     * Parse the sentence given with the Earley Algorithm.
+     * @param s The sentence given
+     * @return True if the sentence is part of the grammar and was successfully parsed, false otherwise.
+     */
     public boolean parse(String s){
 
         // Sentence to be parsed
@@ -116,14 +136,14 @@ public class EarlyParser {
             	               if(p.isDotEnd() == false){
                                    String B = p.getElementAtDot();
                                    if(!state.getVariables().contains(B)) {
-                                       if(EarlyParser.isVariable(B)) {
+                                       if(EarleyParser.isVariable(B)) {
                                            for(Production prod : grammar.getProductions(B)) {
 
                                                Production newP = new Production(prod);
                                                newP.setDotPos(0); //seta nova posi��o do ponto
                                                newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
 
-                                               temp.addRule(B, newP);//adiciona a regra nova
+                                               temp.addRule(B, newP);//addRules a regra nova
                                                increased = true;
                                                out = false;
                                             }
@@ -133,7 +153,7 @@ public class EarlyParser {
 	                		}
 	                	}
                     }
-	                state.adiciona(temp);
+	                state.addRules(temp);
 	           }while(!out);  //End Step (3)
 
                //Step (4)
@@ -167,7 +187,7 @@ public class EarlyParser {
 	                		//}
 	                	}
 	                }
-	                state.adiciona(temp);
+	                state.addRules(temp);
                }while(!out); //End Step(4)
 
             }while(increased); //While new rules are being added
@@ -191,7 +211,11 @@ public class EarlyParser {
 
     }
 
-
+    /**
+     * Check if the string given is a Variable
+     * @param s
+     * @return True if it's a variable
+     */
     public static boolean isVariable(String s){
         if(Character.isUpperCase(s.charAt(0)))
             return true;
@@ -199,6 +223,11 @@ public class EarlyParser {
             return false;
     }
 
+    /**
+     * Check if the word given is a terminal, not a variable.
+     * @param s
+     * @return True if it is a terminal.
+     */
     public static boolean isTerminal(String s){
         if(Character.isLowerCase(s.charAt(0)))
             return true;
@@ -206,6 +235,9 @@ public class EarlyParser {
             return false;
     }
 
+    /**
+     * Prints all set of productions generated in the parsing of the sentence.
+     */
     public void printStates(){
     	int i = 0;
         for(Grammar g : states) {

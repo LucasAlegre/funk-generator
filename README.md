@@ -9,8 +9,8 @@ This is a third semestrer college project, in witch we did a Funk Generator usin
 # To run the project you have to do:
 # How the archieve with your grammar has to be sent
 
-Contributers:
+*Contributers:
 
-https://github.com/cvrnogueira
+*https://github.com/cvrnogueira
 
-https://github.com/gujueno
+*https://github.com/gujueno

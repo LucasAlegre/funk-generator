@@ -115,13 +115,13 @@ public class Grammar {
         Scanner sc = new Scanner(tst);
         String opFlag = "Terminais";
         String buff;
-        buff = sc.nextLine();
+        buff = sc.nextLine().trim();
 
         while(sc.hasNext()){
-            buff = sc.nextLine();
+            buff = sc.nextLine().trim();
             if(buff.contains("Variaveis") || buff.contains("Inicial") || buff.contains("Regras") ){
                 opFlag = buff.substring(0, buff.indexOf(' '));
-                buff = sc.nextLine();
+                buff = sc.nextLine().trim();
             }
             switch(opFlag){
                 case "Terminais":
@@ -203,6 +203,30 @@ public class Grammar {
                 System.out.println();
             }
         }
+    }
+
+    public String grammarToString(){
+        StringBuilder gra = new StringBuilder();
+
+        for(String var : rules.keySet()) {
+            for (Production p : rules.get(var)){
+                gra.append(var + " -> ");
+
+                ArrayList<String> rightSide = p.getVarOrTerminals();
+                for(int i = 0; i < rightSide.size()+1; i++){ //+1 due to possibility of * in the end of the world
+                    if(i == p.getDotPos())
+                        gra.append(" * ");
+                    if(i != rightSide.size())//p n dar erro de pegar um null no get
+                        gra.append("[ " + rightSide.get(i) + " ]");
+                }
+                if(p.getProductionSet() != -1)
+                    gra.append("/" + Integer.toString(p.getProductionSet()));
+                //System.out.println("  Probability = " + p.probability);
+                gra.append("\n");
+            }
+        }
+
+        return gra.toString();
     }
 
     /**

@@ -11,12 +11,12 @@ public class Main {
         System.out.println("Grammar read:");
         funk.printGrammar();
 
-        EarleyParser e = new EarleyParser();
-        e.setGrammar(funk);
+        EarleyParser parser = new EarleyParser();
+        parser.setGrammar(funk);
 
-        boolean isRecognized = e.parse("the dog eats the meat");
+        boolean isRecognized = parser.parse("the dog eats the meat");
         if(isRecognized) {
-            e.printStates();
+            parser.printStates();
             System.out.println("The sentence given was successfully parsed!");
         }
         else

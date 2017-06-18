@@ -92,6 +92,9 @@ public class EarleyParser {
      */
     public boolean parse(String s){
 
+        // Clear from last parsing
+        states.clear();
+
         // Sentence to be parsed
         String[] sentence = s.split(" ");
 
@@ -244,5 +247,15 @@ public class EarleyParser {
             System.out.println("State " + i++  + ":");
             g.printGrammar();
         }
+    }
+
+    public String statesToString(){
+        int i = 0;
+        StringBuilder s = new StringBuilder();
+        for(Grammar g : states) {
+            s.append("State " + i++  + ":" + "\n");
+            s.append(g.grammarToString());
+        }
+        return s.toString();
     }
 }

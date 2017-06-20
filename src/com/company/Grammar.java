@@ -127,7 +127,6 @@ public class Grammar {
                     if (buff.contains("Terminais")) opFlag = "Terminais";
                     buff = sc.nextLine().trim();
                 }
-                System.out.println(buff + opFlag + "\n");
             if (!buff.contains("</div></pre>")) {
                 switch (opFlag) {
                     case "Terminais":
@@ -165,6 +164,8 @@ public class Grammar {
                                     probability = Float.valueOf(buff.substring(indexS + 1, indexS + 5));
                                 } catch (IndexOutOfBoundsException exc) {
                                     probability = Float.valueOf(buff.substring(indexS + 1));
+                                } catch (NumberFormatException e) {
+                                    probability = 1;
                                 }
                             }
                         }
@@ -206,7 +207,7 @@ public class Grammar {
                 }
                 if(p.getProductionSet() != -1)
                     System.out.print("/" + p.getProductionSet());
-                //System.out.println("  Probability = " + p.probability);
+               // System.out.println("  Probability = " + p.getProbability());
                 System.out.println();
             }
         }

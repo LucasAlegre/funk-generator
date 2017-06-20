@@ -129,16 +129,16 @@ public class EarleyParser {
                 increased = false;
 
                 //Step (3)
-                boolean out = false;
+                boolean out;
                 do{
                    Grammar temp = new Grammar();
             	   out = true;
             	   for(String A : state.getVariables()){
             	       for(Production p: state.getProductions(A)){
-            	           if(out == true){
+            	        //  if(out == true){
             	               if(p.isDotEnd() == false){
                                    String B = p.getElementAtDot();
-                                   if(!state.getVariables().contains(B)) {
+                                  // if(!state.getVariables().contains(B)) {
                                        if(EarleyParser.isVariable(B)) {
                                            for(Production prod : grammar.getProductions(B)) {
 
@@ -146,26 +146,27 @@ public class EarleyParser {
                                                newP.setDotPos(0); //seta nova posi��o do ponto
                                                newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
 
-                                               temp.addRule(B, newP);//addRules a regra nova
-                                               increased = true;
-                                               out = false;
+                                               if( !state.containsRule(B, newP) && !temp.containsRule(B, newP)) {
+                                                   temp.addRule(B, newP);//addRules a regra nova
+                                                   increased = true;
+                                                   out = false;
+                                               }
                                             }
                                         }
-                                    }
+                                    //}
 		                		}
-	                		}
+	                		//}
 	                	}
                     }
 	                state.addRules(temp);
 	           }while(!out);  //End Step (3)
 
                //Step (4)
-               out = false;
                do{
                    Grammar temp = new Grammar();
             	   out = true;
-	                for(String A : state.getVariables()){
-	                    for(Production p: state.getProductions(A)){
+            	   for(String A : state.getVariables()){
+	                   for(Production p: state.getProductions(A)){
 	                       // if(out == true){
 	                            if(p.isDotEnd() == true){
 	                                int s2 = p.getProductionSet();
@@ -177,7 +178,7 @@ public class EarleyParser {
                                                 if(alpha.equals(A)) {
                                                     Production newP = new Production(pDeS);
                                                     newP.incDot();
-                                                    if(!state.containsRule(varDeS, newP)) {
+                                                    if( !state.containsRule(varDeS, newP) && !temp.containsRule(varDeS, newP) ) {
                                                         temp.addRule(varDeS, newP);
                                                         increased = true;
                                                         out = false;
@@ -188,7 +189,7 @@ public class EarleyParser {
 		                			}
 		                		}
 	                		//}
-	                	}
+                       }
 	                }
 	                state.addRules(temp);
                }while(!out); //End Step(4)

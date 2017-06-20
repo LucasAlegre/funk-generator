@@ -180,8 +180,11 @@ public class FunkyGUI extends javax.swing.JDialog {
                     jTextArea1.append(e.statesToString());
                     jTextArea1.append("The sentence given was successfully parsed!");
                 }
-                else
-                    jTextArea1.setText("The sentence given is not part of the language!");
+                else {
+                    jTextArea1.setText("Grammar Read:\n" + e.getGrammar().grammarToString());
+                    jTextArea1.append(e.statesToString());
+                    jTextArea1.append("The sentence given is not part of the language!");
+                }
             }
         }
     }

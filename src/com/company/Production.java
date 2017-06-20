@@ -41,13 +41,13 @@ public class Production {
      * @return True if they're equal, false otherwise
      */
     public boolean equals(Production obj) {
-        if(dotPos == obj.dotPos){
+        if(dotPos == obj.dotPos && productionSet == obj.getProductionSet()){
             if(this.varOrTerminals.size() == obj.getVarOrTerminals().size()){
                 for(int i = 0; i < varOrTerminals.size(); i++){
-                    if(!varOrTerminals.get(i).equals(obj.getVarOrTerminals().get(i)))
+                    if( !varOrTerminals.get(i).equals(obj.getVarOrTerminals().get(i)) )
                         return false;
                 }
-                return true;
+                return true; // It has all strings of the right side
             }
             else
                 return false;

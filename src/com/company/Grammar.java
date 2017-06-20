@@ -113,59 +113,66 @@ public class Grammar {
     public void readFile(String text) throws FileNotFoundException{
         File tst = new File(text);
         Scanner sc = new Scanner(tst);
-        String opFlag = "Terminais";
+        String opFlag = "";
         String buff;
         buff = sc.nextLine().trim();
 
-        while(sc.hasNext()){
-            buff = sc.nextLine().trim();
-            if(buff.contains("Variaveis") || buff.contains("Inicial") || buff.contains("Regras") ){
-                opFlag = buff.substring(0, buff.indexOf(' '));
+        while(sc.hasNext()) {
+
                 buff = sc.nextLine().trim();
-            }
-            switch(opFlag){
-                case "Terminais":
-                    String terminal;
-                    terminal = buff.substring(buff.indexOf('[')+2, buff.indexOf(']')-1);
-                    this.terminals.add(terminal);
-                    break;
-                case "Variaveis":
-                    String var;
-                    var = buff.substring(buff.indexOf('[')+2, buff.indexOf(']')-1);
-                    this.variables.add(var);
-                    break;
-                case "Inicial":
-                    String inicio;
-                    inicio = buff.substring(buff.indexOf('[')+2, buff.indexOf(']')-1);
-                    this.initialVariable = inicio;
-                    break;
-                case "Regras":
-                    String variavel;
-                    variavel = buff.substring(buff.indexOf('[')+2, buff.indexOf(']')-1);
-                    ArrayList<String> bufferOfRules = new ArrayList<>();
-                    float probability = 1; //default
-                    int indexS = 0, indexE = 0;
-                    char c;
-                    for(int j = buff.indexOf('>'); j<buff.length(); j++){
-                        c = buff.charAt(j);
-                        if(c == '[') indexS = j;
-                        if(c == ']'){
-                            indexE = j;
-                            bufferOfRules.add(buff.substring(indexS+2, indexE-1));
-                        }
-                        if(c==';'){
-                            indexS = j;
-                            try {
-                                probability = Float.valueOf(buff.substring(indexS+1, indexS + 5));
-                            }catch (IndexOutOfBoundsException exc){
-                                probability = Float.valueOf(buff.substring(indexS+1));
+                if (buff.contains("Variaveis") || buff.contains("Inicial") || buff.contains("Regras") || buff.contains("Terminais")) {
+                    if (buff.contains("Variaveis")) opFlag = "Variaveis";
+                    if (buff.contains("Inicial")) opFlag = "Inicial";
+                    if (buff.contains("Regras")) opFlag = "Regras";
+                    if (buff.contains("Terminais")) opFlag = "Terminais";
+                    buff = sc.nextLine().trim();
+                }
+                System.out.println(buff + opFlag + "\n");
+            if (!buff.contains("</div></pre>")) {
+                switch (opFlag) {
+                    case "Terminais":
+                        String terminal;
+                        terminal = buff.substring(buff.indexOf('[') + 2, buff.indexOf(']') - 1);
+                        this.terminals.add(terminal);
+                        break;
+                    case "Variaveis":
+                        String var;
+                        var = buff.substring(buff.indexOf('[') + 2, buff.indexOf(']') - 1);
+                        this.variables.add(var);
+                        break;
+                    case "Inicial":
+                        String inicio;
+                        inicio = buff.substring(buff.indexOf('[') + 2, buff.indexOf(']') - 1);
+                        this.initialVariable = inicio;
+                        break;
+                    case "Regras":
+                        String variavel;
+                        variavel = buff.substring(buff.indexOf('[') + 2, buff.indexOf(']') - 1);
+                        ArrayList<String> bufferOfRules = new ArrayList<>();
+                        float probability = 1; //default
+                        int indexS = 0, indexE = 0;
+                        char c;
+                        for (int j = buff.indexOf('>'); j < buff.length(); j++) {
+                            c = buff.charAt(j);
+                            if (c == '[') indexS = j;
+                            if (c == ']') {
+                                indexE = j;
+                                bufferOfRules.add(buff.substring(indexS + 2, indexE - 1));
+                            }
+                            if (c == ';') {
+                                indexS = j;
+                                try {
+                                    probability = Float.valueOf(buff.substring(indexS + 1, indexS + 5));
+                                } catch (IndexOutOfBoundsException exc) {
+                                    probability = Float.valueOf(buff.substring(indexS + 1));
+                                }
                             }
                         }
-                    }
-                    this.addRule(variavel, new Production(bufferOfRules), probability);
-                    break;
-            }
+                        this.addRule(variavel, new Production(bufferOfRules), probability);
+                        break;
+                }
 
+            }
         }
         sc.close();
     }

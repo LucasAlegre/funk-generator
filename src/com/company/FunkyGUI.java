@@ -185,8 +185,6 @@ public class FunkyGUI extends javax.swing.JDialog {
             public void run() {
                 try {
                     FileInputStream fis = new FileInputStream("batidao.mp3");
-                    if(batidaoPlaying)
-                        batidaoPlayer.close();
                     batidaoPlayer = new Player(fis);
                     batidaoPlayer.play();
                     batidaoPlaying = true;

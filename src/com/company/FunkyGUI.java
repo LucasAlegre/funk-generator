@@ -5,9 +5,15 @@ package com.company;/*
  */
 
         import java.io.File;
+        import java.io.FileInputStream;
+        import java.io.IOException;
         import java.io.PrintStream;
         import javax.swing.*;
         import javax.swing.filechooser.FileFilter;
+        import javafx.scene.media.Media;
+        import javafx.scene.media.MediaPlayer;
+        import javazoom.jl.decoder.JavaLayerException;
+        import javazoom.jl.player.Player;
 
 /**
  *
@@ -15,8 +21,11 @@ package com.company;/*
  */
 public class FunkyGUI extends javax.swing.JDialog {
 
-    EarleyParser e;
-    boolean fileChosenFlag;
+    private EarleyParser e;
+    private boolean fileChosenFlag;
+    private Player batidaoPlayer = null;
+    boolean batidaoPlaying = false;
+
     /**
      * Creates new form FunkyGUI
      */
@@ -71,7 +80,7 @@ public class FunkyGUI extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setText("SHOW YOUR TUNE! Display it down here!");
+        jLabel2.setText("Write the sentence to be parsed");
 
         jButton2.setFont(new java.awt.Font("Impact", 2, 18)); // NOI18N
         jButton2.setText("Generate Random");
@@ -83,7 +92,7 @@ public class FunkyGUI extends javax.swing.JDialog {
         });
 
         jButton3.setFont(new java.awt.Font("Impact", 2, 18)); // NOI18N
-        jButton3.setText("TEST");
+        jButton3.setText("Parse Sentence");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -167,7 +176,28 @@ public class FunkyGUI extends javax.swing.JDialog {
     }
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        // TODO RANDOM GEN
+
+         if(batidaoPlayer != null)
+            batidaoPlayer.close();
+
+         new Thread() {
+            @Override
+            public void run() {
+                try {
+                    FileInputStream fis = new FileInputStream("batidao.mp3");
+                    if(batidaoPlaying)
+                        batidaoPlayer.close();
+                    batidaoPlayer = new Player(fis);
+                    batidaoPlayer.play();
+                    batidaoPlaying = true;
+                } catch (IOException | JavaLayerException e) {
+                    e.printStackTrace();
+                }
+            }
+         }.start();
+
+         //TODO: Generate random
+
     }
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -178,12 +208,12 @@ public class FunkyGUI extends javax.swing.JDialog {
                 if (isRecognized) {
                     jTextArea1.setText("Grammar Read:\n" + e.getGrammar().grammarToString());
                     jTextArea1.append(e.statesToString());
-                    jTextArea1.append("The sentence given was successfully parsed!");
+                    jTextArea1.append("\nThe sentence given was successfully parsed!");
                 }
                 else {
                     jTextArea1.setText("Grammar Read:\n" + e.getGrammar().grammarToString());
                     jTextArea1.append(e.statesToString());
-                    jTextArea1.append("The sentence given is not part of the language!");
+                    jTextArea1.append("\nThe sentence given is not part of the language!");
                 }
             }
         }

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="FunkGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FunkGenerator_jar</output-path>
+    <root id="archive" name="FunkGenerator.jar">
+      <element id="module-output" name="FunkGenerator" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/jlayer1.0.1/JLayer1.0.1/jl1.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

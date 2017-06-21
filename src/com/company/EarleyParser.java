@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *  Class to implement the Earley Algorithm
@@ -9,7 +11,7 @@ public class EarleyParser {
 
     private Grammar grammar;
     private ArrayList<Grammar> states;
-    private String sentence;
+    private ArrayList<String> sentenceParsed;
     private String sentenceGenerated;
 
     /**
@@ -17,6 +19,7 @@ public class EarleyParser {
      */
     public EarleyParser(){
         states = new ArrayList<Grammar>();
+        sentenceParsed = new ArrayList<String>();
     }
 
     /**
@@ -88,6 +91,8 @@ public class EarleyParser {
     /**
      * Parse the sentence given with the Earley Algorithm.
      * @param s The sentence given
+     *    Obs:
+     *          Any terminal
      * @return True if the sentence is part of the grammar and was successfully parsed, false otherwise.
      */
     public boolean parse(String s){
@@ -96,17 +101,17 @@ public class EarleyParser {
         states.clear();
 
         // Sentence to be parsed
-        String[] sentence = s.split(" ");
+        this.sentenceParsed = sentenceToArrayList(s);
 
         // Build state 0
         buildStateZero();
 
-        int numberOfWords = sentence.length;
+        int numberOfWords = sentenceParsed.size();
 
         // Step (1)
         for(int i = 1; i <= numberOfWords; i++){
             Grammar state = new Grammar();
-            String actualWord = sentence[i - 1];
+            String actualWord = sentenceParsed.get(i - 1);
 
             // Step (2)
             Grammar previousState = states.get(i-1);
@@ -135,27 +140,23 @@ public class EarleyParser {
             	   out = true;
             	   for(String A : state.getVariables()){
             	       for(Production p: state.getProductions(A)){
-            	        //  if(out == true){
-            	               if(p.isDotEnd() == false){
-                                   String B = p.getElementAtDot();
-                                  // if(!state.getVariables().contains(B)) {
-                                       if(EarleyParser.isVariable(B)) {
-                                           for(Production prod : grammar.getProductions(B)) {
+                           if(p.isDotEnd() == false){
+                               String B = p.getElementAtDot();
+                               if(EarleyParser.isVariable(B)) {
+                                   for(Production prod : grammar.getProductions(B)) {
 
-                                               Production newP = new Production(prod);
-                                               newP.setDotPos(0); //seta nova posi��o do ponto
-                                               newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
+                                       Production newP = new Production(prod);
+                                       newP.setDotPos(0); //seta nova posi��o do ponto
+                                       newP.setProductionSet(i);//seta em qual produ��o veio-> o slash
 
-                                               if( !state.containsRule(B, newP) && !temp.containsRule(B, newP)) {
-                                                   temp.addRule(B, newP);//addRules a regra nova
-                                                   increased = true;
-                                                   out = false;
-                                               }
-                                            }
-                                        }
-                                    //}
-		                		}
-	                		//}
+                                       if( !state.containsRule(B, newP) && !temp.containsRule(B, newP)) {
+                                           temp.addRule(B, newP);//addRules a regra nova
+                                           increased = true;
+                                           out = false;
+                                       }
+                                    }
+                                }
+                            }
 	                	}
                     }
 	                state.addRules(temp);
@@ -167,28 +168,26 @@ public class EarleyParser {
             	   out = true;
             	   for(String A : state.getVariables()){
 	                   for(Production p: state.getProductions(A)){
-	                       // if(out == true){
-	                            if(p.isDotEnd() == true){
-	                                int s2 = p.getProductionSet();
-		                			Grammar stateS = states.get(s2);
-		                			for(String varDeS: stateS.getVariables()){
-		                			    for(Production pDeS : stateS.getProductions(varDeS)) {
-		                			        if(pDeS.isDotEnd() == false) {
-		                			            String alpha = pDeS.getElementAtDot();
-                                                if(alpha.equals(A)) {
-                                                    Production newP = new Production(pDeS);
-                                                    newP.incDot();
-                                                    if( !state.containsRule(varDeS, newP) && !temp.containsRule(varDeS, newP) ) {
-                                                        temp.addRule(varDeS, newP);
-                                                        increased = true;
-                                                        out = false;
-                                                    }
+                            if(p.isDotEnd() == true){
+                                int s2 = p.getProductionSet();
+                                Grammar stateS = states.get(s2);
+                                for(String varDeS: stateS.getVariables()){
+                                    for(Production pDeS : stateS.getProductions(varDeS)) {
+                                        if(pDeS.isDotEnd() == false) {
+                                            String alpha = pDeS.getElementAtDot();
+                                            if(alpha.equals(A)) {
+                                                Production newP = new Production(pDeS);
+                                                newP.incDot();
+                                                if( !state.containsRule(varDeS, newP) && !temp.containsRule(varDeS, newP) ) {
+                                                    temp.addRule(varDeS, newP);
+                                                    increased = true;
+                                                    out = false;
                                                 }
                                             }
                                         }
-		                			}
-		                		}
-	                		//}
+                                    }
+                                }
+                            }
                        }
 	                }
 	                state.addRules(temp);
@@ -233,7 +232,7 @@ public class EarleyParser {
      * @return True if it is a terminal.
      */
     public static boolean isTerminal(String s){
-        if(Character.isLowerCase(s.charAt(0)))
+        if(Character.isLowerCase(s.charAt(0)) || s.charAt(0) == '"')
             return true;
         else
             return false;
@@ -245,8 +244,9 @@ public class EarleyParser {
     public void printStates(){
     	int i = 0;
         for(Grammar g : states) {
-            System.out.println("State " + i++  + ":");
+            System.out.println("D" + i  + ":  "  + (i != 0 ? sentenceParsed.get(i-1) : ""));
             g.printGrammar();
+            i++;
         }
     }
 
@@ -254,9 +254,35 @@ public class EarleyParser {
         int i = 0;
         StringBuilder s = new StringBuilder();
         for(Grammar g : states) {
-            s.append("State " + i++  + ":" + "\n");
+            s.append("\nD" + i + ":  " + (i != 0 ? sentenceParsed.get(i-1) : "") + "\n");
             s.append(g.grammarToString());
+            i++;
         }
         return s.toString();
+    }
+
+    /**
+     * Given the string to be parsed, split it into an ArrayList,
+     * If the a token is between " ", it becomes a single terminal:
+     * Ex: "Hi "Mr Robot" !" => [ "hi", "Mr Robot", "!" ]
+     * @param s The string to be parsed
+     * @return The ArrayList of the terminals of the sentence
+     */
+    public static ArrayList<String> sentenceToArrayList(String s){
+
+        String regex = "\"([^\"]*)\"|(\\S+)";
+        ArrayList<String> list = new ArrayList<String>();
+
+        Matcher m = Pattern.compile(regex).matcher(s);
+        while (m.find()) {
+            if (m.group(1) != null) {
+               // x.add( "\"" + m.group(1) + "\"" );
+                list.add( m.group(1) );
+            } else {
+                list.add( m.group(2) );
+            }
+        }
+
+        return list;
     }
 }

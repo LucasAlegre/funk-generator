@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class Grammar {
 
-    public HashMap<String, ArrayList<Production>> rules;
+    private HashMap<String, ArrayList<Production>> rules;
     private String initialVariable;
     private HashSet<String> variables;
     private HashSet<String> terminals;

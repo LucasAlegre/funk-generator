@@ -2,7 +2,7 @@
 
 //--- STILL IN DEVELOPMENT
 
-This is a third semestrer college project, in witch we did a Funk Generator using Earley algorithm. So we implement a parse using earley algorithm.
+This is a third semester university project, in which we did a Funk Generator using the Earley algorithm. A parse implemantation using the Earley algorithm.
 
 # The structures used were:
 

@@ -7,11 +7,7 @@ package com.company;/*
         import java.io.File;
         import java.io.FileInputStream;
         import java.io.IOException;
-        import java.io.PrintStream;
-        import javax.swing.*;
-        import javax.swing.filechooser.FileFilter;
-        import javafx.scene.media.Media;
-        import javafx.scene.media.MediaPlayer;
+
         import javazoom.jl.decoder.JavaLayerException;
         import javazoom.jl.player.Player;
 
@@ -57,7 +53,7 @@ public class FunkyGUI extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/company/funk.jpg")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/funk.jpg")));
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(100, 20));
         jLabel1.setMinimumSize(new java.awt.Dimension(100, 20));

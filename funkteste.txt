@@ -1,4 +1,4 @@
-Terminais		#comentario aleatorio
+Terminais
 [ - ]							# irriiii kkk
 [ : ]		
 [ o ]			                                     	
@@ -54,34 +54,29 @@ Terminais		#comentario aleatorio
 [ vai ]
 [ lek ]              	# O uso dos espacos eh fundamental. Os colchetes devem ser separados do simbolo por espacos.
 Variaveis
-[ S ]			                # A secao de variaveis inicia pela palavra reservada "Variaveis", e eh a segunda do arquivo
 [ N ]					# Eh muito importante respeitar a ordem das secoes
 [ V ]					# Note que a sintaxe eh case-sensitive, isto eh, maiusculas e minusculas sao diferenciadas
 [ NP ]					# Simbolos variaveis sao qualquer conjunto de caracteres nao reservados entre colchetes.
 [ DT ]					# Sugere-se evitar o uso de acentos para que o uso em outras plataformas nao corrompa o arquivo.
 [ VP ]
-[ ADJ ]
-[ PP ]
-[ DET ]
-[ ARTISTA ]
-[ TITULO ]
-[ LETRA ]
-[ REFRAO ]
+[ S ]
 Inicial
 [ S ]					# Essa secao possui apenas uma linha com o simbolo inicial entre colchetes.
 Regras
 [ S ] > [ ARTISTA ] [ - ] [ TITULO ] [ : ] [ LETRA ] [ REFRAO ]
 [ TITULO ] > [ N ] [ ADJ ]
 [ LETRA ] > [ LETRA ] [ NP ] [ VP ]
+[ LETRA ] > [ LETRA ] [ NP ] [ VP ]
+[ LETRA ] > [ LETRA ] [ NP ] [ VP ]
+[ LETRA ] > [ LETRA ] [ NP ] [ VP ]
+[ LETRA ] > [ LETRA ] [ NP ] [ VP ]
 [ LETRA ] > [ NP ] [ VP ]
 [ NP ] > [ DET ] [ N ]
 [ NP ] > [ DET ] [ N ] [ ADJ ]
 [ NP ] > [ P ] [ N ]
-[ NP ] > [ P ] [ N ] [ ADJ ]
 [ NP ] > [ N ]
 [ NP ] > [ NP ] [ PP ]
 [ PP ] > [ P ] [ NP ]
-[ VP ] > [ V ]
 [ VP ] > [ V ] [ NP ]
 [ VP ] > [ VP ] [ PP ]
 [ DET ] > [ o ]		                                     	
@@ -131,13 +126,14 @@ Regras
 [ P ] > [ na ]
 [ P ] > [ em ]
 [ P ] > [ ate o chao ]
-[ REFRAO ] > [ REFRAO ] [ REFRAO ]
+[ REFRAO ] > [ REFRAO ] [ REFRAO2 ]
 [ REFRAO ] > [ tchu ]
 [ REFRAO ] > [ tcha ]
 [ REFRAO ] > [ vai ]
 [ REFRAO ] > [ V ]
 [ REFRAO ] > [ V ] [ N ]
-[ REFRAO ] > [ lek ]      
-[ ARTISTA ] > [ mc catra ]
+[ REFRAO ] > [ lek ]
+[ REFRAO2 ] > [ REFRAO ]   
+[ ARTISTA ] > [ mc ] [ catra ]
 [ ARTISTA ] > [ mc ] [ ADJ ]
 [ ARTISTA ] > [ bonde ] [ ADJ ]

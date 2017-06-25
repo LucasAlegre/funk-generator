@@ -10,6 +10,16 @@ package com.company;/*
 
         import javazoom.jl.decoder.JavaLayerException;
         import javazoom.jl.player.Player;
+        import java.io.FileOutputStream;
+        import com.voicerss.tts.AudioCodec;
+        import com.voicerss.tts.AudioFormat;
+        import com.voicerss.tts.Languages;
+        import com.voicerss.tts.SpeechDataEvent;
+        import com.voicerss.tts.SpeechDataEventListener;
+        import com.voicerss.tts.SpeechErrorEvent;
+        import com.voicerss.tts.SpeechErrorEventListener;
+        import com.voicerss.tts.VoiceParameters;
+        import com.voicerss.tts.VoiceProvider;
 
 /**
  *
@@ -83,7 +93,12 @@ public class FunkyGUI extends javax.swing.JDialog {
         jButton2.setAutoscrolls(true);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                try {
+					jButton2MouseClicked(evt);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 
@@ -171,29 +186,32 @@ public class FunkyGUI extends javax.swing.JDialog {
 
     }
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) throws Exception {//GEN-FIRST:event_jButton2MouseClicked
 
-         if(batidaoPlayer != null)
-            batidaoPlayer.close();
-
-         new Thread() {
-            @Override
-            public void run() {
-                try {
-                    FileInputStream fis = new FileInputStream("batidao.mp3");
-                    batidaoPlayer = new Player(fis);
-                    batidaoPlayer.play();
-                    batidaoPlaying = true;
-
-                    jTextArea1.setText(e.generateRandom(10));
-
-                } catch (IOException | JavaLayerException e) {
-                    e.printStackTrace();
-                }
-            }
-         }.start();
+//         if(batidaoPlayer != null)
+//            batidaoPlayer.close();
+//
+//         new Thread() {
+//            @Override
+//            public void run() {
+//                try {
+//                    FileInputStream fis = new FileInputStream("batidao.mp3");
+//                    batidaoPlayer = new Player(fis);
+//                    batidaoPlayer.play();
+//                    batidaoPlaying = true;
+//
+//                    jTextArea1.setText(e.generateRandom(10));
+//
+//                } catch (IOException | JavaLayerException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//         }.start();
 
          //TODO: Generate random
+          jTextArea1.setText(e.generateRandom(10));
+          String funk = e.generateRandom(10);
+          voice(funk);
 
     }
 
@@ -272,4 +290,33 @@ public class FunkyGUI extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField1;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
-}
+    
+    
+    
+     void voice (String funk) throws Exception {
+            VoiceProvider tts = new VoiceProvider("3216c1e8f0f14ca7ad74432d80ab82d9");
+            VoiceParameters params = new VoiceParameters(funk, Languages.Portuguese_Brazil);
+            params.setCodec(AudioCodec.WAV);
+            params.setFormat(AudioFormat.Format_44KHZ.AF_44khz_16bit_stereo);
+            params.setBase64(false);
+            params.setSSML(false);
+            params.setRate(0);
+    		
+            byte[] voice = tts.speech(params);
+    		
+            FileOutputStream fos = new FileOutputStream("voice.mp3");
+            fos.write(voice, 0, voice.length);
+            fos.flush();
+            fos.close();
+        }
+    }
+
+
+
+
+
+
+
+
+
+

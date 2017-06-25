@@ -72,7 +72,7 @@ public class Production {
      * @return True if the dot is at the end.
      */
     public boolean isDotEnd(){
-        return dotPos == varOrTerminals.size();
+        return (dotPos == varOrTerminals.size());
     }
 
     /**

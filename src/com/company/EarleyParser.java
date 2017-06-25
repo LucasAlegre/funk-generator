@@ -70,6 +70,7 @@ public class EarleyParser {
      */
     private void buildStateZero(){
 
+
         Grammar stateZero = new Grammar();
 
         // For each rule of the inital variable, clones it to the state zero
@@ -124,10 +125,10 @@ public class EarleyParser {
      */
      private void scanning(Grammar state, int i){
 
-         Grammar previousState = states.get(i-1);
+         Grammar previousState = states.get(i - 1);
          String actualWord = sentenceParsed.get(i - 1);
 
-         for( String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
+         for(String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
              for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
                  if(p.isDotEnd() == false){
                      if(p.getElementAtDot().equals(actualWord)){//se o elemento pos ponto for igual a palavra da pessoa
@@ -140,6 +141,46 @@ public class EarleyParser {
              }
          }
      }
+
+    /**
+     *  Step (2) : Parse a random word, adding the rules that generate it
+     *  @param state The actual state
+     *  @param i the index of the actual state
+     */
+    private void randomScanning(Grammar state, int i){
+
+        Grammar previousState = states.get(i - 1);
+        ArrayList<String> terminals = new ArrayList<String>();
+
+        for(String a : previousState.getVariables()){
+            for(Production p : previousState.getProductions(a)){
+                if(p.isDotEnd() == false) {
+                    if (isTerminal(p.getElementAtDot())) {
+                        terminals.add(p.getElementAtDot());
+                    }
+                }
+            }
+        }
+
+        Random random = new Random();
+        String actualWord = terminals.get( random.nextInt(terminals.size()) );
+        this.sentenceGenerated.concat(actualWord + " ");
+        System.out.println(sentenceGenerated);
+
+        for(String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
+            for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
+                if(p.isDotEnd() == false){
+                    if(p.getElementAtDot().equals(actualWord)){//se o elemento pos ponto for igual a palavra da pessoa
+                        //significa que eu tenho de adicionar a regra no conjunto de produ��es atual
+                        Production newP = new Production(p);
+                        newP.incDot();
+                        state.addRule(a, newP);
+                    }
+                }
+            }
+        }
+    }
+
 
     /**
      *  Step (3) : Add rules that can generate the next word
@@ -244,7 +285,7 @@ public class EarleyParser {
                temp = new Grammar();
                // For each rule in the state
                for(String A : state.getVariables()){
-                   for(Production p : state.getProductions(A)){
+                       for(Production p : state.getProductions(A)){
 
                        //Step (3) : Add rules that can generate the next word
                        if(p.isDotEnd() == false){
@@ -265,6 +306,51 @@ public class EarleyParser {
 
         return checkParse();
 
+    }
+
+    public String generateRandom(int size){
+        // Clear from last parsing
+        this.states.clear();
+
+        this.sentenceGenerated = new String();
+        this.numberOfWords = size;
+
+        // Build state 0
+        buildStateZero();
+
+        // Step (1)
+        for(int i = 1; i <= numberOfWords; i++){
+            Grammar state = new Grammar();
+
+            // Step (2)
+            randomScanning(state, i);
+
+            do{
+                increased = false;
+
+                temp = new Grammar();
+                // For each rule in the state
+                for(String A : state.getVariables()){
+                    for(Production p : state.getProductions(A)){
+
+                        //Step (3) : Add rules that can generate the next word
+                        if(p.isDotEnd() == false){
+                            predictor(state, i, p);
+                        }
+                        //Step (4) : Add rules that refer to the variable A
+                        else{
+                            completer(state, A, p);
+                        }
+                    }
+                }
+                state.addRules(temp);
+
+            }while(increased); //While new rules are being added
+
+            states.add(state);
+        }
+
+        return this.sentenceGenerated;
     }
 
     /**

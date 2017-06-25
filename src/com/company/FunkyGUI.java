@@ -53,7 +53,7 @@ public class FunkyGUI extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/funk.jpg")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/company/funk.jpg")));
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(100, 20));
         jLabel1.setMinimumSize(new java.awt.Dimension(100, 20));
@@ -184,6 +184,9 @@ public class FunkyGUI extends javax.swing.JDialog {
                     batidaoPlayer = new Player(fis);
                     batidaoPlayer.play();
                     batidaoPlaying = true;
+
+                    jTextArea1.setText(e.generateRandom(12));
+
                 } catch (IOException | JavaLayerException e) {
                     e.printStackTrace();
                 }

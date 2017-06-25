@@ -155,8 +155,9 @@ public class EarleyParser {
         for(String a : previousState.getVariables()){
             for(Production p : previousState.getProductions(a)){
                 if(p.isDotEnd() == false) {
-                    if (isTerminal(p.getElementAtDot())) {
-                        terminals.add(p.getElementAtDot());
+                    String atDot = p.getElementAtDot();
+                    if (isTerminal(atDot)) {
+                        terminals.add(atDot);
                     }
                 }
             }
@@ -164,7 +165,8 @@ public class EarleyParser {
 
         Random random = new Random();
         String actualWord = terminals.get( random.nextInt(terminals.size()) );
-        this.sentenceGenerated.concat(actualWord + " ");
+        this.sentenceGenerated += actualWord + " ";
+        this.sentenceParsed.add(actualWord);
         System.out.println(sentenceGenerated);
 
         for(String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
@@ -190,7 +192,7 @@ public class EarleyParser {
      */
      private void predictor(Grammar state, int i, Production p){
          String B = p.getElementAtDot();
-         if(EarleyParser.isVariable(B)) {
+         if( isVariable(B) ) {
              for(Production prod : grammar.getProductions(B)) {
 
                  Production newP = new Production(prod);
@@ -370,11 +372,8 @@ public class EarleyParser {
      * @param s
      * @return True if it is a terminal.
      */
-    public static boolean isTerminal(String s){
-        if(Character.isLowerCase(s.charAt(0)) || s.charAt(0) == '"')
-            return true;
-        else
-            return false;
+    public boolean isTerminal(String s){
+        return grammar.containsTerminal(s);
     }
 
     /**

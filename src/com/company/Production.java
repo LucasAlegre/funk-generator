@@ -32,7 +32,6 @@ public class Production {
         dotPos = p.getDotPos();
         productionSet = p.getProductionSet();
         probability = p.getProbability();
-
     }
 
     /**

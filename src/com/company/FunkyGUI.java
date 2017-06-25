@@ -185,7 +185,7 @@ public class FunkyGUI extends javax.swing.JDialog {
                     batidaoPlayer.play();
                     batidaoPlaying = true;
 
-                    jTextArea1.setText(e.generateRandom(12));
+                    jTextArea1.setText(e.generateRandom(10));
 
                 } catch (IOException | JavaLayerException e) {
                     e.printStackTrace();

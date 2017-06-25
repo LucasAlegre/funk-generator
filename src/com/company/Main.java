@@ -14,7 +14,11 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        // Run FunkyGUI Main !
+        EarleyParser e = new EarleyParser();
+        Grammar g = new Grammar("funkteste.txt");
+        e.setGrammar(g);
+
+        System.out.print(e.generateRandom(10));
     }
 
 }

@@ -30,6 +30,7 @@ public class FunkyGUI extends javax.swing.JDialog {
     private EarleyParser e;
     private boolean fileChosenFlag;
     private Player batidaoPlayer = null;
+    private Player voicePlayer = null;
     boolean batidaoPlaying = false;
 
     /**
@@ -188,30 +189,42 @@ public class FunkyGUI extends javax.swing.JDialog {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) throws Exception {//GEN-FIRST:event_jButton2MouseClicked
 
-//         if(batidaoPlayer != null)
-//            batidaoPlayer.close();
-//
-//         new Thread() {
-//            @Override
-//            public void run() {
-//                try {
-//                    FileInputStream fis = new FileInputStream("batidao.mp3");
-//                    batidaoPlayer = new Player(fis);
-//                    batidaoPlayer.play();
-//                    batidaoPlaying = true;
-//
-//                    jTextArea1.setText(e.generateRandom(10));
-//
-//                } catch (IOException | JavaLayerException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//         }.start();
+         if(batidaoPlayer != null)
+            batidaoPlayer.close();
 
-         //TODO: Generate random
-          jTextArea1.setText(e.generateRandom(10));
-          String funk = e.generateRandom(10);
-          voice(funk);
+         new Thread() {
+            @Override
+            public void run() {
+                try {
+                    FileInputStream fis = new FileInputStream("batidao.mp3");
+                    batidaoPlayer = new Player(fis);
+                    batidaoPlayer.play();
+                    batidaoPlaying = true;
+
+                } catch (IOException | JavaLayerException e) {
+                    e.printStackTrace();
+                }
+            }
+         }.start();
+
+        String funk = e.generateRandom(40);
+        jTextArea1.setText(funk);
+        voice(funk);
+
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+
+                    FileInputStream fis = new FileInputStream("voice.mp3");
+                    voicePlayer = new Player(fis);
+                    voicePlayer.play();
+
+                } catch (IOException | JavaLayerException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
 
     }
 
@@ -290,17 +303,14 @@ public class FunkyGUI extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField1;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
-    
-    
-    
+
      void voice (String funk) throws Exception {
             VoiceProvider tts = new VoiceProvider("3216c1e8f0f14ca7ad74432d80ab82d9");
             VoiceParameters params = new VoiceParameters(funk, Languages.Portuguese_Brazil);
-            params.setCodec(AudioCodec.WAV);
             params.setFormat(AudioFormat.Format_44KHZ.AF_44khz_16bit_stereo);
             params.setBase64(false);
             params.setSSML(false);
-            params.setRate(0);
+            params.setRate(-4);
     		
             byte[] voice = tts.speech(params);
     		

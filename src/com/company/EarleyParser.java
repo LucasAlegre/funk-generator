@@ -167,7 +167,6 @@ public class EarleyParser {
         String actualWord = terminals.get( random.nextInt(terminals.size()) );
         this.sentenceGenerated += actualWord + " ";
         this.sentenceParsed.add(actualWord);
-        System.out.println(sentenceGenerated);
 
         for(String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
             for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos

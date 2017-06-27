@@ -27,7 +27,7 @@ package com.company;/*
  */
 public class FunkyGUI extends javax.swing.JDialog {
 
-    private EarleyParser e;
+    private EarleyParser e = new EarleyParser();
     private boolean fileChosenFlag;
     private Player batidaoPlayer = null;
     private Player voicePlayer = null;
@@ -171,19 +171,17 @@ public class FunkyGUI extends javax.swing.JDialog {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-            e = new EarleyParser();
             jFileChooser1.showDialog(getParent(), "ACCEPT");
             try{
                 File file = jFileChooser1.getSelectedFile();
                 Grammar funk = new Grammar(file.getAbsolutePath());
                 funk.printGrammar();
                 e.setGrammar(funk);
+                jTextArea1.setText("Grammar Read:\n" + funk.grammarToString());
                 fileChosenFlag = true;
             }catch (NullPointerException exc){
 
             }
-
-
 
     }
 
@@ -191,6 +189,8 @@ public class FunkyGUI extends javax.swing.JDialog {
 
          if(batidaoPlayer != null)
             batidaoPlayer.close();
+         if(voicePlayer != null)
+             voicePlayer.close();
 
          new Thread() {
             @Override
@@ -209,6 +209,7 @@ public class FunkyGUI extends javax.swing.JDialog {
 
         String funk = e.generateRandom(40);
         jTextArea1.setText(funk);
+        jTextArea1.append(e.statesToString());
         voice(funk);
 
         new Thread() {
@@ -234,12 +235,10 @@ public class FunkyGUI extends javax.swing.JDialog {
                 boolean isRecognized = e.parse(jTextField1.getText());
                 System.out.println(jTextField1.getText());
                 if (isRecognized) {
-                    jTextArea1.setText("Grammar Read:\n" + e.getGrammar().grammarToString());
                     jTextArea1.append(e.statesToString());
                     jTextArea1.append("\nThe sentence given was successfully parsed!");
                 }
                 else {
-                    jTextArea1.setText("Grammar Read:\n" + e.getGrammar().grammarToString());
                     jTextArea1.append(e.statesToString());
                     jTextArea1.append("\nThe sentence given is not part of the language!");
                 }

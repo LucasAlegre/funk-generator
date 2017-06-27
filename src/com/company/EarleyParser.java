@@ -164,18 +164,20 @@ public class EarleyParser {
         }
 
         Random random = new Random();
-        String actualWord = terminals.get( random.nextInt(terminals.size()) );
-        this.sentenceGenerated += actualWord + " ";
-        this.sentenceParsed.add(actualWord);
+        if(!terminals.isEmpty()) {
+            String actualWord = terminals.get(random.nextInt(terminals.size()));
+            this.sentenceGenerated += actualWord + " ";
+            this.sentenceParsed.add(actualWord);
 
-        for(String a: previousState.getVariables()){ //etapa 2, retorna todos o lado esq das regras
-            for(Production p: previousState.getProductions(a) ){//p cada lado esq tamos vendo os lados direitos
-                if(p.isDotEnd() == false){
-                    if(p.getElementAtDot().equals(actualWord)){//se o elemento pos ponto for igual a palavra da pessoa
-                        //significa que eu tenho de adicionar a regra no conjunto de produ��es atual
-                        Production newP = new Production(p);
-                        newP.incDot();
-                        state.addRule(a, newP);
+            for (String a : previousState.getVariables()) { //etapa 2, retorna todos o lado esq das regras
+                for (Production p : previousState.getProductions(a)) {//p cada lado esq tamos vendo os lados direitos
+                    if (p.isDotEnd() == false) {
+                        if (p.getElementAtDot().equals(actualWord)) {//se o elemento pos ponto for igual a palavra da pessoa
+                            //significa que eu tenho de adicionar a regra no conjunto de produ��es atual
+                            Production newP = new Production(p);
+                            newP.incDot();
+                            state.addRule(a, newP);
+                        }
                     }
                 }
             }
@@ -313,6 +315,7 @@ public class EarleyParser {
         // Clear from last parsing
         this.states.clear();
 
+        this.sentenceParsed = new ArrayList<String>();
         this.sentenceGenerated = new String();
         this.numberOfWords = size;
 
@@ -381,7 +384,12 @@ public class EarleyParser {
     public void printStates(){
     	int i = 0;
         for(Grammar g : states) {
-            System.out.println("D" + i  + ":  "  + (i != 0 ? sentenceParsed.get(i-1) : ""));
+            System.out.print("D" + i  + ":  ");
+            // Print word parsed in the state i
+            if(i != 0 && (sentenceParsed.size() > (i - 1))){
+               System.out.print(sentenceParsed.get(i - 1));
+            }
+            System.out.println();
             g.printGrammar();
             i++;
         }
@@ -391,8 +399,12 @@ public class EarleyParser {
         int i = 0;
         StringBuilder s = new StringBuilder();
         for(Grammar g : states) {
-            s.append("\nD" + i + ":  " + (i != 0 ? sentenceParsed.get(i-1) : "") + "\n");
-            s.append(g.grammarToString());
+            s.append("\nD" + i + ":  ");
+            // Print word parsed in the state i
+            if(i != 0 && (sentenceParsed.size() > (i - 1))){
+                s.append(sentenceParsed.get(i - 1));
+            }
+            s.append("\n" + g.grammarToString());
             i++;
         }
         return s.toString();

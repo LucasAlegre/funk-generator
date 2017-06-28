@@ -17,5 +17,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="voicerss_tts" level="project" />
+    <orderEntry type="library" name="jl1.0.1" level="project" />
   </component>
 </module>

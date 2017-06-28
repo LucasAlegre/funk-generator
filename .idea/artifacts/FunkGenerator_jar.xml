@@ -3,7 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/FunkGenerator_jar</output-path>
     <root id="archive" name="FunkGenerator.jar">
       <element id="module-output" name="FunkGenerator" />
+      <element id="library" level="project" name="jl1.0.1" />
       <element id="extracted-dir" path="$USER_HOME$/Desktop/jlayer1.0.1/JLayer1.0.1/jl1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/voicerss_tts.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

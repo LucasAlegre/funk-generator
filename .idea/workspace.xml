@@ -2,126 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63ddc4f6-70ee-4510-81cf-b81ee3313a84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funkGrammar.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/artifacts/FunkGenerator_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/libraries/voicerss_tts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/FunkGenerator.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/Integrantes.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/funkteste.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/Converter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/RiffFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFileObuffer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/jlc.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitReserve.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Bitstream.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamErrors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Control.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Crc16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Decoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderErrors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Equalizer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/FrameDecoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Header.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/InputStreamSource.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerErrors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerHook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIDecoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIDecoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIIDecoder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Manager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Obuffer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/OutputChannels.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SampleBuffer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Source.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SynthesisFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/au2lin.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/huffcodetab.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/l3reorder.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/lin2au.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/sfd.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDevice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/FactoryRegistry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDevice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDeviceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/NullAudioDevice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/PlayerApplet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/AdvancedPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/jlap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/jlp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/voicerss_tts.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/artifacts/FunkGenerator_jar/FunkGenerator.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/EarleyParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Grammar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Production.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/funk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/EarleyParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Grammar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Production.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/funk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/EarleyParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Grammar.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Production.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/funk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/funkteste.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/voice.mp3" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/EarleyParser.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/EarleyParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/FunkyGUI.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/FunkyGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Production.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Production.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/voice.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jl1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunkGenerator.jar" afterPath="$PROJECT_DIR$/FunkGenerator.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/FunkGenerator_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FunkGenerator_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/EarleyParser.java" afterPath="$PROJECT_DIR$/src/com/company/EarleyParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/FunkyGUI.java" afterPath="$PROJECT_DIR$/src/com/company/FunkyGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Production.java" afterPath="$PROJECT_DIR$/src/com/company/Production.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunkGenerator.iml" afterPath="$PROJECT_DIR$/FunkGenerator.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -149,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6052">
-              <caret line="360" column="0" lean-forward="true" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+              <caret line="360" column="0" lean-forward="false" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/funkGrammar.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+              <caret line="149" column="19" lean-forward="false" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -171,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Production.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1398">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
                 <element signature="e#2396#2397#0" expanded="true" />
                 <element signature="e#2440#2441#0" expanded="true" />
@@ -205,10 +91,9 @@
       <file leaf-file-name="FunkyGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1553#1642#0" expanded="true" />
                 <element signature="e#15871#16397#0" expanded="true" />
                 <element signature="e#16396#16397#0" expanded="true" />
@@ -328,20 +213,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunkGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunkGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -352,10 +223,10 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries/voicerss_tts.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/FunkGenerator_jar" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -718,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498617913497</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add jar">
+      <created>1498690136411</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1498690136411</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -805,7 +683,6 @@
         <state relative-caret-position="3553">
           <caret line="209" column="41" lean-forward="true" selection-start-line="209" selection-start-column="41" selection-end-line="209" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -866,7 +743,6 @@
         <state relative-caret-position="3689">
           <caret line="217" column="0" lean-forward="true" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -890,7 +766,6 @@
         <state relative-caret-position="3179">
           <caret line="187" column="47" lean-forward="true" selection-start-line="187" selection-start-column="47" selection-end-line="187" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -931,7 +806,6 @@
         <state relative-caret-position="1139">
           <caret line="190" column="32" lean-forward="false" selection-start-line="190" selection-start-column="32" selection-end-line="190" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -974,7 +848,6 @@
         <state relative-caret-position="1156">
           <caret line="185" column="37" lean-forward="false" selection-start-line="185" selection-start-column="37" selection-end-line="185" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -1017,7 +890,6 @@
         <state relative-caret-position="1105">
           <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -1048,7 +920,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />
@@ -1170,7 +1041,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1180,7 +1051,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6052">
-          <caret line="360" column="0" lean-forward="true" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
+          <caret line="360" column="0" lean-forward="false" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1198,7 +1069,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Production.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1398">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="e#2396#2397#0" expanded="true" />
             <element signature="e#2440#2441#0" expanded="true" />
@@ -1209,17 +1080,16 @@
     <entry file="file://$PROJECT_DIR$/funkGrammar.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+          <caret line="149" column="19" lean-forward="false" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
             <element signature="e#15871#16397#0" expanded="true" />
             <element signature="e#16396#16397#0" expanded="true" />

@@ -2,123 +2,126 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63ddc4f6-70ee-4510-81cf-b81ee3313a84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/Converter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/RiffFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFileObuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/jlc.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitReserve.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Bitstream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamErrors.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Control.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Crc16.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Decoder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderErrors.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Equalizer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/FrameDecoder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Header.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/InputStreamSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerError.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerErrors.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerHook.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIDecoder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIDecoder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIIDecoder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Manager.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Obuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/OutputChannels.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SampleBuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Source.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SynthesisFilter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/au2lin.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/huffcodetab.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/l3reorder.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/lin2au.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/sfd.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDevice.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceBase.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/FactoryRegistry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDevice.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDeviceFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/NullAudioDevice.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/Player.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/PlayerApplet.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/AdvancedPlayer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackEvent.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/jlap.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/jlp.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/voicerss_tts.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/artifacts/FunkGenerator_jar/FunkGenerator.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/EarleyParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$8.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$9.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Grammar.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Production.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/funk.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/EarleyParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Grammar.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Production.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/funk.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/funk.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/artifacts/FunkGenerator_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/libraries/voicerss_tts.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/FunkGenerator.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/Integrantes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/funkteste.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/EarleyParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Grammar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Production.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batidao.mp3" afterPath="$PROJECT_DIR$/batidao.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FunkGenerator.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funkGrammar.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/artifacts/FunkGenerator_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/libraries/voicerss_tts.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/FunkGenerator.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/Integrantes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/funkteste.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/Converter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/RiffFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/WaveFileObuffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/converter/jlc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitReserve.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Bitstream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamErrors.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/BitstreamException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Control.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Crc16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Decoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderErrors.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/DecoderException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Equalizer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/FrameDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Header.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/InputStreamSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerErrors.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerHook.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/JavaLayerUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/LayerIIIDecoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Manager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Obuffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/OutputChannels.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SampleBuffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/Source.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/SynthesisFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/au2lin.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/huffcodetab.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/l3reorder.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/lin2au.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/decoder/sfd.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDevice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceBase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/AudioDeviceFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/FactoryRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDevice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/JavaSoundAudioDeviceFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/NullAudioDevice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/Player.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/PlayerApplet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/AdvancedPlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/PlaybackListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/advanced/jlap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/jl1.0.1.jar/javazoom/jl/player/jlp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/libraries/voicerss_tts.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/artifacts/FunkGenerator_jar/FunkGenerator.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/EarleyParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/FunkyGUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Grammar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/Production.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/FunkGenerator/com/company/funk.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/EarleyParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/FunkyGUI.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Grammar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/Production.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/out/production/untitled104/com/company/funk.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/EarleyParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/FunkyGUI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Grammar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/Production.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FunkGenerator - Copia/src/com/company/funk.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/funkteste.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/voice.mp3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/EarleyParser.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/EarleyParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Grammar.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Grammar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/FunkyGUI.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/FunkyGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voice.mp3" afterPath="$PROJECT_DIR$/voice.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Production.class" afterPath="$PROJECT_DIR$/out/production/FunkGenerator/com/company/Production.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funkteste.txt" afterPath="$PROJECT_DIR$/funkteste.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/EarleyParser.java" afterPath="$PROJECT_DIR$/src/com/company/EarleyParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Grammar.java" afterPath="$PROJECT_DIR$/src/com/company/Grammar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/FunkyGUI.java" afterPath="$PROJECT_DIR$/src/com/company/FunkyGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Production.java" afterPath="$PROJECT_DIR$/src/com/company/Production.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,28 +145,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EarleyParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EarleyParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="94" column="28" lean-forward="false" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+            <state relative-caret-position="6052">
+              <caret line="360" column="0" lean-forward="true" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2510#2518#0" expanded="true" />
-                <element signature="e#5427#5435#0" expanded="true" />
-                <element signature="e#13055#13056#0" expanded="true" />
-                <element signature="e#13105#13106#0" expanded="true" />
-                <element signature="e#14781#14789#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="funkteste.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funkteste.txt">
+      <file leaf-file-name="funkGrammar.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/funkGrammar.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -172,8 +170,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,17 +182,9 @@
       <file leaf-file-name="Grammar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Grammar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <element signature="e#1358#1370#0" expanded="true" />
-                <element signature="e#1764#1776#0" expanded="true" />
-                <element signature="e#3009#3021#0" expanded="true" />
-                <element signature="e#8824#8825#0" expanded="true" />
-                <element signature="e#8861#8862#0" expanded="true" />
-                <element signature="e#8903#8904#0" expanded="true" />
-                <element signature="e#8941#8942#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-3685">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,56 +192,27 @@
       <file leaf-file-name="Production.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Production.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="1398">
+              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
-                <element signature="e#2552#2553#0" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-                <element signature="e#2668#2669#0" expanded="true" />
-                <element signature="e#2797#2798#0" expanded="true" />
-                <element signature="e#2826#2827#0" expanded="true" />
-                <element signature="e#2867#2868#0" expanded="true" />
-                <element signature="e#2903#2904#0" expanded="true" />
-                <element signature="e#2940#2941#0" expanded="true" />
-                <element signature="e#2976#2977#0" expanded="true" />
-                <element signature="e#3031#3032#0" expanded="true" />
-                <element signature="e#3081#3082#0" expanded="true" />
-                <element signature="e#3133#3134#0" expanded="true" />
-                <element signature="e#3170#3171#0" expanded="true" />
+                <element signature="e#2396#2397#0" expanded="true" />
+                <element signature="e#2440#2441#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FunkyGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FunkyGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="663">
+              <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
               <folding>
-                <element signature="e#1518#1548#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="e#1553#1642#0" expanded="true" />
-                <element signature="e#3348#3520#0" expanded="true" />
-                <element signature="e#3519#3520#0" expanded="true" />
-                <element signature="e#3672#3673#0" expanded="true" />
-                <element signature="e#3735#3736#0" expanded="true" />
-                <element signature="e#3992#4164#0" expanded="true" />
-                <element signature="e#4163#4164#0" expanded="true" />
-                <element signature="e#4309#4481#0" expanded="true" />
-                <element signature="e#4480#4481#0" expanded="true" />
-                <element signature="e#4864#4865#0" expanded="true" />
-                <element signature="e#4927#4928#0" expanded="true" />
-                <element signature="e#5016#5187#0" expanded="true" />
-                <element signature="e#5186#5187#0" expanded="true" />
-                <element signature="e#5334#5335#0" expanded="true" />
-                <element signature="e#5393#5394#0" expanded="true" />
-                <element signature="e#14759#15261#0" expanded="true" />
-                <element signature="e#15260#15261#0" expanded="true" />
-                <element signature="e#15627#16076#0" expanded="true" />
-                <element signature="e#16075#16076#0" expanded="true" />
-                <element signature="e#16961#17048#0" expanded="true" />
-                <element signature="e#18561#18785#0" expanded="true" />
-                <element signature="e#18784#18785#0" expanded="true" />
+                <element signature="e#15871#16397#0" expanded="true" />
+                <element signature="e#16396#16397#0" expanded="true" />
+                <element signature="e#17282#17369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -264,6 +225,7 @@
       <find>change size</find>
       <find>test</find>
       <find>&quot;fun</find>
+      <find>popo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -280,13 +242,14 @@
         <option value="$PROJECT_DIR$/FunkGenerator.iml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/txtTest.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/Production.java" />
-        <option value="$PROJECT_DIR$/src/com/company/FunkyGUI.java" />
-        <option value="$PROJECT_DIR$/funkteste.txt" />
         <option value="$PROJECT_DIR$/src/com/company/Grammar.java" />
-        <option value="$PROJECT_DIR$/src/com/company/EarleyParser.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/sample.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/funkteste.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/Production.java" />
+        <option value="$PROJECT_DIR$/src/com/company/EarleyParser.java" />
+        <option value="$PROJECT_DIR$/funkGrammar.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/FunkyGUI.java" />
       </list>
     </option>
   </component>
@@ -382,13 +345,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
@@ -418,7 +381,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.FunkyGUI">
     <configuration default="false" name="FunkyGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -669,8 +632,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FunkyGUI" />
+        <item index="0" class="java.lang.String" itemvalue="Application.FunkyGUI" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -748,7 +711,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498611032039</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Upper case terminal bug fixed">
+      <created>1498617913497</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1498617913497</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -763,9 +733,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24813896" sideWeight="0.5348331" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2133995" sideWeight="0.49709725" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24813896" sideWeight="0.4651669" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06458636" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2133995" sideWeight="0.49709725" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -775,13 +744,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28039703" sideWeight="0.48258346" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06458636" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49709725" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -797,30 +767,12 @@
     <MESSAGE value="readfile changed" />
     <MESSAGE value="Bug of not recursive grammars corrected" />
     <MESSAGE value="Last fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last fixes" />
+    <MESSAGE value="Upper case terminal bug fixed" />
+    <MESSAGE value="Add jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/EarleyParser.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/EarleyParser.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/EarleyParser.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -842,19 +794,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,29 +805,11 @@
         <state relative-caret-position="3553">
           <caret line="209" column="41" lean-forward="true" selection-start-line="209" selection-start-column="41" selection-end-line="209" selection-end-column="41" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -897,16 +820,11 @@
           <caret line="163" column="9" lean-forward="false" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funkteste.txt">
+    <entry file="file://$PROJECT_DIR$/funkGrammar.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
@@ -928,15 +846,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3094">
           <caret line="184" column="5" lean-forward="false" selection-start-line="184" selection-start-column="5" selection-end-line="184" selection-end-column="5" />
-          <folding>
-            <element signature="e#1358#1370#0" expanded="true" />
-            <element signature="e#1764#1776#0" expanded="true" />
-            <element signature="e#3009#3021#0" expanded="true" />
-            <element signature="e#8824#8825#0" expanded="true" />
-            <element signature="e#8861#8862#0" expanded="true" />
-            <element signature="e#8903#8904#0" expanded="true" />
-            <element signature="e#8941#8942#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -945,19 +855,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -967,29 +866,11 @@
         <state relative-caret-position="3689">
           <caret line="217" column="0" lean-forward="true" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,11 +881,6 @@
           <caret line="338" column="51" lean-forward="false" selection-start-line="338" selection-start-column="28" selection-end-line="338" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1014,29 +890,11 @@
         <state relative-caret-position="3179">
           <caret line="187" column="47" lean-forward="true" selection-start-line="187" selection-start-column="47" selection-end-line="187" selection-end-column="47" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1054,11 +912,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1069,11 +922,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1083,29 +931,11 @@
         <state relative-caret-position="1139">
           <caret line="190" column="32" lean-forward="false" selection-start-line="190" selection-start-column="32" selection-end-line="190" selection-end-column="32" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,41 +952,19 @@
         <state relative-caret-position="663">
           <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txtTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/txtTest.txt" />
     <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="210" column="17" lean-forward="true" selection-start-line="210" selection-start-column="17" selection-end-line="210" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1166,29 +974,11 @@
         <state relative-caret-position="1156">
           <caret line="185" column="37" lean-forward="false" selection-start-line="185" selection-start-column="37" selection-end-line="185" selection-end-column="37" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,41 +995,19 @@
         <state relative-caret-position="850">
           <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding>
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txtTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/txtTest.txt" />
     <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3077">
           <caret line="181" column="73" lean-forward="true" selection-start-line="181" selection-start-column="73" selection-end-line="181" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1249,29 +1017,11 @@
         <state relative-caret-position="1105">
           <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1282,11 +1032,6 @@
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,29 +1048,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1430,130 +1157,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txtTest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/txtTest.txt" />
     <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funkteste.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample.txt" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="306">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Production.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3133#3134#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="e#1518#1548#0" expanded="true" />
-            <element signature="e#1553#1642#0" expanded="true" />
-            <element signature="e#3348#3520#0" expanded="true" />
-            <element signature="e#3519#3520#0" expanded="true" />
-            <element signature="e#3672#3673#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3992#4164#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4309#4481#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4864#4865#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-            <element signature="e#5016#5187#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5393#5394#0" expanded="true" />
-            <element signature="e#14759#15261#0" expanded="true" />
-            <element signature="e#15260#15261#0" expanded="true" />
-            <element signature="e#15627#16076#0" expanded="true" />
-            <element signature="e#16075#16076#0" expanded="true" />
-            <element signature="e#16961#17048#0" expanded="true" />
-            <element signature="e#18561#18785#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Grammar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#1358#1370#0" expanded="true" />
-            <element signature="e#1764#1776#0" expanded="true" />
-            <element signature="e#3009#3021#0" expanded="true" />
-            <element signature="e#8824#8825#0" expanded="true" />
-            <element signature="e#8861#8862#0" expanded="true" />
-            <element signature="e#8903#8904#0" expanded="true" />
-            <element signature="e#8941#8942#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/EarleyParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="94" column="28" lean-forward="false" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+        <state relative-caret-position="6052">
+          <caret line="360" column="0" lean-forward="true" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2510#2518#0" expanded="true" />
-            <element signature="e#5427#5435#0" expanded="true" />
-            <element signature="e#13055#13056#0" expanded="true" />
-            <element signature="e#13105#13106#0" expanded="true" />
-            <element signature="e#14781#14789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Grammar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3685">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Production.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1398">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#2396#2397#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funkGrammar.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/FunkyGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1553#1642#0" expanded="true" />
+            <element signature="e#15871#16397#0" expanded="true" />
+            <element signature="e#16396#16397#0" expanded="true" />
+            <element signature="e#17282#17369#0" expanded="true" />
           </folding>
         </state>
       </provider>

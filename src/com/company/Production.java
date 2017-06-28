@@ -55,9 +55,6 @@ public class Production {
             return false;
     }
 
-    public void setVarOrTerminals(ArrayList<String> varOrTerm) {
-        this.varOrTerminals = varOrTerm;
-    }
 
     /**
      *  Moves the dot pointer in one position.
@@ -119,6 +116,10 @@ public class Production {
 
     public ArrayList<String> getVarOrTerminals() {
         return varOrTerminals;
+    }
+
+    public void setVarOrTerminals(ArrayList<String> varOrTerm) {
+        this.varOrTerminals = varOrTerm;
     }
 
 }

@@ -14,13 +14,14 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        /*
         EarleyParser e = new EarleyParser();
-        Grammar g = new Grammar("sample.txt");
+        Grammar g = new Grammar("funk.txt");
         e.setGrammar(g);
         g.printGrammar();
+        */
 
-
-       System.out.print(e.generateRandom(2));
+       System.out.println("Executar o main do FunkyGUI!");
     }
 
 }

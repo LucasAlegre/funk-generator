@@ -351,6 +351,7 @@ public class EarleyParser {
 
             }while(increased); //While new rules are being added
 
+            // If new word was generated
             if(!state.getVariables().isEmpty()) {
                 states.add(state);
             }
@@ -358,6 +359,7 @@ public class EarleyParser {
                 numberOfWords = i - 1;
             }
 
+            // If it did not gerenate a valid sentence, try adding one more word
             if(!state.getVariables().isEmpty() && numberOfWords == i && !checkParse())
                numberOfWords++;
 
@@ -378,7 +380,7 @@ public class EarleyParser {
      * @param s
      * @return True if it's a variable
      */
-    public boolean isVariable(String s){
+    private boolean isVariable(String s){
         return grammar.containsVariable(s);
     }
 
@@ -387,7 +389,7 @@ public class EarleyParser {
      * @param s
      * @return True if it is a terminal.
      */
-    public boolean isTerminal(String s){
+    private boolean isTerminal(String s){
         return grammar.containsTerminal(s);
     }
 

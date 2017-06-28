@@ -219,6 +219,12 @@ public class FunkyGUI extends javax.swing.JDialog {
         );
 
         pack();
+
+        e = new EarleyParser();
+        Grammar funk = new Grammar("funkGrammar.txt");
+        funk.printGrammar();
+        e.setGrammar(funk);
+        jTextArea2.setText("Grammar:\n" + funk.grammarToString());
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -243,7 +249,6 @@ public class FunkyGUI extends javax.swing.JDialog {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
 
-        e = new EarleyParser();
         jFileChooser1.showDialog(getParent(), "ACCEPT");
         try{
             File file = jFileChooser1.getSelectedFile();
@@ -262,6 +267,8 @@ public class FunkyGUI extends javax.swing.JDialog {
 
         if(batidaoPlayer != null)
             batidaoPlayer.close();
+        if(voicePlayer != null)
+            voicePlayer.close();
 
         if(checkbox1.getState() == true) {
             new Thread() {
@@ -284,13 +291,12 @@ public class FunkyGUI extends javax.swing.JDialog {
         String funk = e.generateRandom(sentenceSize);
         jTextArea1.setText(funk);
 
-
         if(checkbox1.getState() == true) {
             try{
                 voice(funk);
             }catch (Exception e){
                 e.printStackTrace();
-                System.out.println("Erro na geração do voice.mp3");
+                jTextArea1.setText("Erro na geração do voice.mp3");
             }
 
             new Thread() {
@@ -304,6 +310,7 @@ public class FunkyGUI extends javax.swing.JDialog {
 
                     } catch (IOException | JavaLayerException e) {
                         e.printStackTrace();
+                        jTextArea1.setText("Erro na execução do voice.mp3");
                     }
                 }
             }.start();
@@ -390,6 +397,8 @@ public class FunkyGUI extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     void voice (String funk) throws Exception {
+
+        // Reserve key :   0c2af0ff80fa4efbaa108a85c7ff3d05
         VoiceProvider tts = new VoiceProvider("3216c1e8f0f14ca7ad74432d80ab82d9");
         VoiceParameters params = new VoiceParameters(funk, Languages.Portuguese_Brazil);
         params.setFormat(AudioFormat.Format_44KHZ.AF_44khz_16bit_stereo);
@@ -403,6 +412,7 @@ public class FunkyGUI extends javax.swing.JDialog {
         fos.write(voice, 0, voice.length);
         fos.flush();
         fos.close();
+
     }
 }
 

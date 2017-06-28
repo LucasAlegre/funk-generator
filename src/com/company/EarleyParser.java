@@ -166,7 +166,6 @@ public class EarleyParser {
         Random random = new Random();
         if(!terminals.isEmpty()) {
             String actualWord = terminals.get(random.nextInt(terminals.size()));
-            this.sentenceGenerated += actualWord + " ";
             this.sentenceParsed.add(actualWord);
 
             for (String a : previousState.getVariables()) { //etapa 2, retorna todos o lado esq das regras
@@ -182,6 +181,7 @@ public class EarleyParser {
                 }
             }
         }
+
     }
 
 
@@ -323,7 +323,8 @@ public class EarleyParser {
         buildStateZero();
 
         // Step (1)
-        for(int i = 1; i <= numberOfWords; i++){
+        int i = 1;
+        while(i <= numberOfWords){
             Grammar state = new Grammar();
 
             // Step (2)
@@ -351,9 +352,25 @@ public class EarleyParser {
 
             }while(increased); //While new rules are being added
 
-            states.add(state);
+            if(!state.getVariables().isEmpty()) {
+                states.add(state);
+            }
+            else{
+                numberOfWords = i - 1;
+            }
+
+            if(!state.getVariables().isEmpty() && numberOfWords == i && !checkParse())
+               numberOfWords++;
+
+            i++;
         }
 
+        for(String s : sentenceParsed){
+            if(s.equals("endl"))
+                sentenceGenerated += "\n";
+            else
+                sentenceGenerated += (s + " ");
+        }
         return this.sentenceGenerated;
     }
 
@@ -399,12 +416,12 @@ public class EarleyParser {
         int i = 0;
         StringBuilder s = new StringBuilder();
         for(Grammar g : states) {
-            s.append("\nD" + i + ":  ");
+            s.append("D" + i + ":  ");
             // Print word parsed in the state i
             if(i != 0 && (sentenceParsed.size() > (i - 1))){
                 s.append(sentenceParsed.get(i - 1));
             }
-            s.append("\n" + g.grammarToString());
+            s.append("\n" + g.grammarToString() + "\n");
             i++;
         }
         return s.toString();

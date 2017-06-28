@@ -126,13 +126,24 @@ public class Grammar {
         while(sc.hasNext()) {
 
             buff = sc.nextLine().trim();
-            if (buff.equals("Variaveis") || buff.equals("Inicial") || buff.equals("Regras") || buff.equals("Terminais")) {
-                if (buff.contains("Variaveis")) opFlag = "Variaveis";
-                if (buff.contains("Inicial")) opFlag = "Inicial";
-                if (buff.contains("Regras")) opFlag = "Regras";
-                if (buff.contains("Terminais")) opFlag = "Terminais";
+
+            if (buff.contains("Variaveis")){
+                opFlag = "Variaveis";
                 buff = sc.nextLine().trim();
             }
+            else if (buff.contains("Inicial")){
+                opFlag = "Inicial";
+                buff = sc.nextLine().trim();
+            }
+            else if (buff.contains("Regras")){
+                opFlag = "Regras";
+                buff = sc.nextLine().trim();
+            }
+            else if (buff.contains("Terminais")){
+                opFlag = "Terminais";
+                buff = sc.nextLine().trim();
+            }
+
             switch (opFlag) {
                 case "Terminais":
                     String terminal;

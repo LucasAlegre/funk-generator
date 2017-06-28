@@ -17,8 +17,9 @@ public class Main {
         EarleyParser e = new EarleyParser();
         Grammar g = new Grammar("funkteste.txt");
         e.setGrammar(g);
+        g.printGrammar();
 
-        System.out.print(e.generateRandom(10));
+        System.out.print(e.generateRandom(100));
     }
 
 }

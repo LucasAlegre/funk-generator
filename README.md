@@ -7,10 +7,13 @@ It is possible to check if a sentence is part of a given grammar and also to gen
 ## To run the project you have to do:
 
 Run the FunkGenerator.jar
+Select a valid grammar on the txt format (FunkGrammar is the default).
+Click on "Parse" to parse the string in the textField or click on "Generate Random" to generate a random sentence.
+Check "Funk Mode" option to use it to play a random funk music!
 
-It is important to keep the "batidao.mp3" file in the same folder as the executable
+*It is important to keep the "batidao.mp3" file in the same folder as the executable
 
-You can also import it as a Java Project
+You can also import it as a Java Project!
 
 ## How the archive with your grammar has to be sent
 

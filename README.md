@@ -1,17 +1,20 @@
 # FunkGenerator
 
-This is a third semester university project in which we did a Funk Generator using the Earley algorithm. A parse implemantation using the Earley algorithm. It is possible to check if a sentence is part of a given grammar and also to generate a random sentence of any grammar.
+This is a third semester university project in which we did a Funk Generator using the Earley algorithm.
+A parse implemantation using the Earley algorithm.
+It is possible to check if a sentence is part of a given grammar and also to generate a random sentence of any grammar.
 
 ## To run the project you have to do:
 
 Run the FunkGenerator.jar
+
 It is important to keep the "batidao.mp3" file in the same folder as the executable
 
 You can also import it as a Java Project
 
 ## How the archive with your grammar has to be sent
 
-''
+```
 Terminais        # comments are preceded by '#'
 [ the ]          # terminals section
 [ a ]
@@ -56,7 +59,7 @@ Regras          # the rules of the grammar
 [ V ] > [ ate ] 
 [ V ] > [ chased ]
 [ V ] > [ liked ]
-''
+```
 
 ## Authors:
 
